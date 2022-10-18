@@ -2,9 +2,33 @@
 @model IndexModel
 @{
     ViewData["Title"] = "Home page";
+    var movie = ViewData["Movie"];
 }
 
 <div class="text-center">
     <h1 class="display-4">Welcome</h1>
     <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+
+    <table>
+        <tr>
+            <th>Title</th>
+            <th>Year</th>
+            <th>Director</th>
+            <th>IMDB Rating</th>
+            <th>Box Office</th>
+        </tr>
+        @{
+            foreach (Movie movieItem in movie)
+            {
+                <tr>
+                    <td>@movieItem.Title</td>
+                    <td>@movieItem.Year</td>
+                    <td>@movieItem.Director</td>
+                    <td>@movieItem.ImdbRating</td>
+                    <td>@movieItem.BoxOffice</td>
+                </tr>
+            }
+        }
+    </table>
+
 </div>
