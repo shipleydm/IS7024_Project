@@ -3,28 +3,37 @@
 @{
     ViewData["Title"] = "Home page";
     var movie = (Movie) ViewData["Movie"];
+
 }
 
 <div class="text-center">
     <h1 class="display-4">Welcome</h1>
     <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
 
-    <table>
+    <img src="@movie.Poster" alt="Movie Poster">
+
+    <table id="table">
         <tr>
             <th>Title</th>
             <th>Year</th>
             <th>Director</th>
+            <th>Actors</th>
+            <th>Writer</th>
+            <th>Runtime</th>
             <th>IMDB Rating</th>
             <th>Box Office</th>
         </tr>
 
-                <tr>
-                    <td>@movie.Title</td>
-                    <td>@movie.Year</td>
-                    <td>@movie.Director</td>
-                    <td>@movie.ImdbRating</td>
-                    <td>@movie.BoxOffice</td>
-                </tr>
+        <tr>
+            <td>@movie.Title</td>
+            <td>@movie.Year</td>
+            <td>@movie.Director</td>
+            <td>@movie.Actors</td>
+            <td>@movie.Writer</td>
+            <td>@movie.Runtime</td>
+            <td>@movie.ImdbRating</td>
+            <td>@movie.BoxOffice</td>
+        </tr>
 
     </table>
 
