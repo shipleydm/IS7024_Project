@@ -2,7 +2,7 @@
 @model IndexModel
 @{
     ViewData["Title"] = "Home page";
-    var movie = ViewData["Movie"];
+    var movie = (Movie) ViewData["Movie"];
 }
 
 <div class="text-center">
@@ -17,18 +17,15 @@
             <th>IMDB Rating</th>
             <th>Box Office</th>
         </tr>
-        @{
-            foreach (Movie movieItem in movie)
-            {
+
                 <tr>
-                    <td>@movieItem.Title</td>
-                    <td>@movieItem.Year</td>
-                    <td>@movieItem.Director</td>
-                    <td>@movieItem.ImdbRating</td>
-                    <td>@movieItem.BoxOffice</td>
+                    <td>@movie.Title</td>
+                    <td>@movie.Year</td>
+                    <td>@movie.Director</td>
+                    <td>@movie.ImdbRating</td>
+                    <td>@movie.BoxOffice</td>
                 </tr>
-            }
-        }
+
     </table>
 
 </div>
