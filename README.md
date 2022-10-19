@@ -28,11 +28,16 @@ The details of the movie that will be provided will include:
 
 ![StoryBoard_BottomPage](https://user-images.githubusercontent.com/101297146/196309068-1e3f4b75-d83a-47c0-9f62-c52f3b07c521.png)
 
+### Data Sources
+ 1) https://www.omdbapi.com/
+ 2) https://rapidapi.com/movie-of-the-night-movie-of-the-night-default/api/streaming-availability/
+ 3) https://developer.apple.com/library/archive/documentation/AudioVideo/Conceptual/iTuneSearchAPI/Searching.html#//apple_ref/doc/uid/TP40017632-CH5-SW1
+
+
 ### Team Composition
 - Darren Shipley
 - Jason Day
 - Praveen Singi
 
 Team Meeting - Every Friday 7:30 PM in Teams
- 
 
