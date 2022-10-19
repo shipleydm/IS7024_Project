@@ -16,3 +16,12 @@ html {
 body {
   margin-bottom: 60px;
 }
+
+tr {
+    display: block;
+    float: left;
+}
+
+th, td {
+    display: block;
+}
