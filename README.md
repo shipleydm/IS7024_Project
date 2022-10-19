@@ -27,3 +27,12 @@ The details of the movie that will be provided will include:
 ![StoryBoard_MiddlePage](https://user-images.githubusercontent.com/101297146/196309044-de21b5bb-b9de-4bde-b26a-4f7b250df362.png)
 
 ![StoryBoard_BottomPage](https://user-images.githubusercontent.com/101297146/196309068-1e3f4b75-d83a-47c0-9f62-c52f3b07c521.png)
+
+### Team Composition
+- Darren Shipley
+- Jason Day
+- Praveen Singi
+
+Team Meeting - Every Friday 7:30 PM in Teams
+ 
+
