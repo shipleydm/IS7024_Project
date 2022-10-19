@@ -33,11 +33,12 @@ The details of the movie that will be provided will include:
  2) https://rapidapi.com/movie-of-the-night-movie-of-the-night-default/api/streaming-availability/
  3) https://developer.apple.com/library/archive/documentation/AudioVideo/Conceptual/iTuneSearchAPI/Searching.html#//apple_ref/doc/uid/TP40017632-CH5-SW1
 
-
-### Team Composition
+## Team Composition
+### Team Members
 - Darren Shipley
 - Jason Day
 - Praveen Singi
 
-Team Meeting - Every Friday 7:30 PM in Teams
+### Weekly meeting time and format 
+Friday 7:30 PM in Teams
 
