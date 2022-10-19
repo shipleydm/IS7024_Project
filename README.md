@@ -28,6 +28,17 @@ The details of the movie that will be provided will include:
 
 ![StoryBoard_BottomPage](https://user-images.githubusercontent.com/101297146/196309068-1e3f4b75-d83a-47c0-9f62-c52f3b07c521.png)
 
+## Functional Requirements
+### Requirement 1: Search for Movies
+Scenario
+As a user interested in movies, I want to be able to search movies based on any filter: movie name, movie genre, movie director, movie actor
+
+Dependencies
+Movies search data are available and accessible.
+
+Assumptions
+Names are stated in English.
+
 ### Data Sources
  1) https://www.omdbapi.com/
  2) https://rapidapi.com/movie-of-the-night-movie-of-the-night-default/api/streaming-availability/
