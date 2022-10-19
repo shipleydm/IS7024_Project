@@ -36,6 +36,9 @@ The details of the movie that will be provided will include:
 
 ![StoryBoard_BottomPage](https://user-images.githubusercontent.com/101297146/196309068-1e3f4b75-d83a-47c0-9f62-c52f3b07c521.png)
 
+## Projects
+https://github.com/users/shipleydm/projects/1/views/1
+
 ## Functional Requirements
 ### Requirement 1: Search for Movies
 Scenario
