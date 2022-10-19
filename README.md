@@ -30,13 +30,13 @@ The details of the movie that will be provided will include:
 
 ## Functional Requirements
 ### Requirement 1: Search for Movies
-Scenario
+### Scenario
 As a user interested in movies, I want to be able to search movies based on any filter: movie name, movie genre, movie director, movie actor
 
-Dependencies
+### Dependencies
 Movies search data are available and accessible.
 
-Assumptions
+### Assumptions
 Names are stated in English.
 
 ### Data Sources
