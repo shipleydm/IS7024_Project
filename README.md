@@ -21,6 +21,14 @@ The details of the movie that will be provided will include:
 - Storyline
 - Link to Stream/Purchase  
 
+## Logo
+### Primary  
+![icon_orange](https://user-images.githubusercontent.com/51447959/196820576-432a932f-0646-426a-b126-324a00ec499f.png)  
+
+### Alternative  
+![icon_bw](https://user-images.githubusercontent.com/51447959/196820597-9dfebd06-b8f7-45a7-b945-fbaad20bfcad.png)  
+
+
 ## Storyboard
 ![StoryBoard_TopPage](https://user-images.githubusercontent.com/101297146/196309202-df4e5b28-0472-43cf-ab5c-5123df275699.png)
 
@@ -30,13 +38,13 @@ The details of the movie that will be provided will include:
 
 ## Functional Requirements
 ### Requirement 1: Search for Movies
-### Scenario
+Scenario
 As a user interested in movies, I want to be able to search movies based on any filter: movie name, movie genre, movie director, movie actor
 
-### Dependencies
+Dependencies
 Movies search data are available and accessible.
 
-### Assumptions
+Assumptions
 Names are stated in English.
 
 ### Data Sources
