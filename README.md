@@ -57,9 +57,9 @@ Names are stated in English.
 
 ## Team Composition
 ### Team Members
-- Darren Shipley
-- Jason Day
-- Praveen Singi
+- [Darren Shipley](https://github.com/shipleydm)
+- [Jason Day](https://github.com/jasonjday)
+- [Praveen Singi](https://github.com/praveensingi)
 
 ### Weekly meeting time and format 
 Friday 7:30 PM in Teams
