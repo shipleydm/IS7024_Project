@@ -1,10 +1,10 @@
 # IS7024_Project
 ## Introduction
 ### Overview
-We will be making a movie search application. Users can search for a movie and see its poster along with additional details about the movie like cast, director, and ratings. We'll also allow the users to see a trending list of popular movies.  
+We will be making a movie search application. Users can search for a movie and see its poster along with additional details about the movie like cast, director, and ratings. We'll also allow the users to see a trending list of popular movies.    
 
 ### Purpose
-The web application is to provide users with the ability to enter a movie title and retrieve information about that film. The scope on a movie can be narrowed by entering specific attributes about a film into the form. These attributes could be genre, year, director, and/or cast members.  
+The web application is to provide users with the ability to search for a movie information. They might be a cinephile and want to find information related to different movies or want to get ideas of what to watch next.
 
 ### Scope
 The details of the movie that will be provided will include:
@@ -18,8 +18,7 @@ The details of the movie that will be provided will include:
 - Cast Members
 - Awards
 - Poster
-- Storyline
-- Link to Stream/Purchase  
+- Storyline 
 
 ## Logo
 ### Primary  
@@ -34,7 +33,7 @@ The details of the movie that will be provided will include:
 
 ![StoryBoard_MiddlePage](https://user-images.githubusercontent.com/101297146/196309044-de21b5bb-b9de-4bde-b26a-4f7b250df362.png)
 
-![StoryBoard_BottomPage](https://user-images.githubusercontent.com/101297146/196309068-1e3f4b75-d83a-47c0-9f62-c52f3b07c521.png)
+![StoryBoard_BottomPage](https://user-images.githubusercontent.com/101297146/197305127-c1c90031-d26b-4ce0-bec0-4ca78e868fe9.png)
 
 ## Projects
 https://github.com/users/shipleydm/projects/1/views/1
@@ -141,8 +140,7 @@ And I should receive at least one result with these attributes:
 
 ### Data Sources
  1) [OMDB API](http://www.omdbapi.com/?apikey=280d36f8&t=infinity+war)
- 2) [Streaming Availability](https://streaming-availability.p.rapidapi.com/get/basic?country=us&tmdb_id=movie%2F120&output_language=en)
- 3) [Trending Movies](https://api.themoviedb.org/3/trending/movie/week?api_key=641404d7aea85802758ccd6b0857f41a)
+ 2) [Trending Movies](https://api.themoviedb.org/3/trending/movie/week?api_key=641404d7aea85802758ccd6b0857f41a)
 
 ## Team Composition
 ### Team Members
