@@ -29,6 +29,8 @@ The details of the movie that will be provided will include:
 
 
 ## Storyboard
+These storyboards provide a high-level overview of the screen designs we plan to create. Note, for simplicity sake of the designs, not every data attribute we plan to display back is shown in each section, these designs were meant to show the general look and feel of the type of infoormation users can expect. Also, there is a legend-key to aid the design visuals, this will not be implemented in the UI.
+
 ![StoryBoard_TopPage](https://user-images.githubusercontent.com/101297146/196309202-df4e5b28-0472-43cf-ab5c-5123df275699.png)
 
 ![StoryBoard_MiddlePage](https://user-images.githubusercontent.com/101297146/196309044-de21b5bb-b9de-4bde-b26a-4f7b250df362.png)
@@ -44,7 +46,7 @@ https://github.com/users/shipleydm/projects/1/views/1
 As a user interested in movies, I want to be able to search movies based on movie name or imdb id.
 
 ### Dependencies
-Movies data is available and accessible.
+Movie data is available and accessible.
 
 ### Assumptions
 Names are stated in English.
@@ -53,7 +55,7 @@ Names are stated in English.
 
 1.1
 
->**Given** movies data is available.
+>**Given** movie data is available.
 >
 >**When**  I search for "Infinity war".
 >
@@ -78,14 +80,14 @@ Names are stated in English.
 - Storyline : The Avengers and their allies must be willing to sacrifice all in an attempt to defeat the powerful Thanos before his blitz of devastation and ruin puts an end to the universe.
 
 1.2 
->**Given** movies data is available.
+>**Given** movie data is available.
 >
 >**When**  I search for "sklujapouetllkjsda".
 >
 >**Then**  I should receive zero results (an empty list).
 
 1.3
->**Given** movies data is unavailable.
+>**Given** movie data is unavailable.
 >
 >**When**  I search for "infinity war".
 >
@@ -93,20 +95,23 @@ Names are stated in English.
 
 ## Requirement 2: View list of trending movies
 ### Scenario
-As a user interested in movies, I want to be able to view list of trending movies.
+As a user interested in movies, I want to be able to view a list of trending movies.
 
 ### Dependencies
 Trending Movies data is available and accessible.
+
+### Assumptions
+Names are stated in English.
 
 ### Examples: 
 
 2.1
 
->**Given**  trending movies data is available.
+>**Given**  trending movie data is available.
 >
 >**When**  I want to view list of trending movies. 
 >
->**Then**  I should receive a atleast result with following attributes.
+>**Then**  I should receive results with attributes similar to the following for each movie.
 
 - Title       : Bullet Train
 - Language    : en
@@ -131,7 +136,7 @@ And I should receive at least one result with these attributes:
 - Release Date: 2022-10-19
 
 2.2
->**Given**  trending movies data is unavailable.
+>**Given**  trending movie data is unavailable.
 >
 >**When**  I want to view list of trending movies. 
 >
