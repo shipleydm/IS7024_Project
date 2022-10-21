@@ -53,10 +53,9 @@ Names are stated in English.
 ### Examples
 
 1.1
-
-**Given** movies data is available
-**When**  I search for "Infinity war"
-**Then**  I should receive one result which closely matches the title along with these attributes.
+> **Given** movies data is available
+> **When**  I search for "Infinity war"
+> **Then**  I should receive one result which closely matches the title along with these attributes.
 - Title : Avengers: Infinity War
 - Year  : 2018
 - Director(s) : Anthony Russo, Joe Russo
