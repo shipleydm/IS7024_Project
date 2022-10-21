@@ -42,7 +42,7 @@ https://github.com/users/shipleydm/projects/1/views/1
 ## Functional Requirements
 ### Requirement 1: Search for Movies
 Scenario
-As a user interested in movies, I want to be able to search movies based on any filter: movie name, movie genre, movie director, movie actor
+As a user interested in movies, I want to be able to search movies based on movie name, imdb id.
 
 Dependencies
 Movies search data are available and accessible.
@@ -51,15 +51,15 @@ Assumptions
 Names are stated in English.
 
 ### Data Sources
- 1) https://www.omdbapi.com/
+ 1) [OMDB api](http://www.omdbapi.com/?t=infinity+war)
  2) https://rapidapi.com/movie-of-the-night-movie-of-the-night-default/api/streaming-availability/
  3) https://developer.apple.com/library/archive/documentation/AudioVideo/Conceptual/iTuneSearchAPI/Searching.html#//apple_ref/doc/uid/TP40017632-CH5-SW1
 
 ## Team Composition
 ### Team Members
-- [Darren Shipley](https://github.com/shipleydm)
-- [Jason Day](https://github.com/jasonjday)
-- [Praveen Singi](https://github.com/praveensingi)
+Devops Engineer / Scrum Master - [Darren Shipley](https://github.com/shipleydm)
+Front End Engineer - [Jason Day](https://github.com/jasonjday)
+Integration Engineer - [Praveen Singi](https://github.com/praveensingi)
 
 ### Weekly meeting time and format 
 Friday 7:30 PM in Teams
