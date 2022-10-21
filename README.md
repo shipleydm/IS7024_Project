@@ -52,8 +52,7 @@ Names are stated in English.
 
 ### Data Sources
  1) [OMDB API](http://www.omdbapi.com/?apikey=280d36f8&t=infinity+war)
- 2) https://rapidapi.com/movie-of-the-night-movie-of-the-night-default/api/streaming-availability/
- 3) https://developer.apple.com/library/archive/documentation/AudioVideo/Conceptual/iTuneSearchAPI/Searching.html#//apple_ref/doc/uid/TP40017632-CH5-SW1
+ 2) [Streaming Availability] (https://streaming-availability.p.rapidapi.com/get/basic?country=us&tmdb_id=movie%2F120&output_language=en)
 
 ## Team Composition
 ### Team Members
