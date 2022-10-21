@@ -23,10 +23,10 @@ The details of the movie that will be provided will include:
 
 ## Logo
 ### Primary  
-![icon_orange](https://user-images.githubusercontent.com/51447959/196820576-432a932f-0646-426a-b126-324a00ec499f.png)  
+![icon_orange](https://user-images.githubusercontent.com/51447959/196820576-432a932f-0646-426a-b126-324a00ec499f.png "Primary Application Logo")  
 
 ### Alternative  
-![icon_bw](https://user-images.githubusercontent.com/51447959/196820597-9dfebd06-b8f7-45a7-b945-fbaad20bfcad.png)  
+![icon_bw](https://user-images.githubusercontent.com/51447959/196820597-9dfebd06-b8f7-45a7-b945-fbaad20bfcad.png  "Secondary Application Logo")  
 
 
 ## Storyboard
