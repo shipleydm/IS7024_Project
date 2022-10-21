@@ -53,9 +53,13 @@ Names are stated in English.
 ### Examples
 
 1.1
+
 >**Given** movies data is available.
+>
 >**When**  I search for "Infinity war".
+>
 >**Then**  I should receive one result which closely matches the title along with these attributes.
+
 - Title : Avengers: Infinity War
 - Year  : 2018
 - Director(s) : Anthony Russo, Joe Russo
@@ -76,8 +80,64 @@ Names are stated in English.
 
 1.2 
 >**Given** movies data is available.
+>
 >**When**  I search for "sklujapouetllkjsda".
+>
 >**Then**  I should receive zero results (an empty list).
+
+1.3
+>**Given** movies data is unavailable.
+>
+>**When**  I search for "infinity war".
+>
+>**Then**  I should receive an error message with 503 internal servor error. Please try again later.
+
+## Requirement 2: View list of trending movies
+### Scenario
+As a user interested in movies, I want to be able to view list of trending movies.
+
+### Dependencies
+Trending Movies data is available and accessible.
+
+### Examples: 
+
+2.1
+
+>**Given**  trending movies data is available.
+>
+>**When**  I want to view list of trending movies. 
+>
+>**Then**  I should receive a atleast result with following attributes.
+
+- Title       : Bullet Train
+- Language    : en
+- Overview    : Unlucky assassin Ladybug is determined to do his job peacefully after one too many gigs gone off the rails. Fate, however, may have other plans, as Ladybug's latest mission puts him on a collision course with lethal adversaries from around the globe—all with connected, yet conflicting, objectives—on the world's fastest train.
+- Genre       : Action, Adveture, Thriller
+- Poster Path : /tVxDe01Zy3kZqaZRNiXFGDICdZk.jpg
+- Popularity  : 2179.463
+- Vote Count  : 7.51
+- Vote Average: 1890
+- Release Date: 2022-07-03
+
+And I should receive at least one result with these attributes:
+
+- Title       : Black Adam
+- Language    : en 
+- Overview    : Nearly 5,000 years after he was bestowed with the almighty powers of the Egyptian gods—and imprisoned just as quickly—Black Adam is freed from his earthly tomb, ready to unleash his unique form of justice on the modern world.
+- Genre       : Action / SuperHero
+- Poster Path : /pFlaoHTZeyNkG83vxsAJiGzfSsa.jpg
+- Popularity  : 2618.689
+- Vote Count  : 166
+- Vote Average: 7.53
+- Release Date: 2022-10-19
+
+2.2
+>**Given**  trending movies data is unavailable.
+>
+>**When**  I want to view list of trending movies. 
+>
+>**Then**  I should receive an error message with 503 internal servor error. Please try again later.
+
 
 ### Data Sources
  1) [OMDB API](http://www.omdbapi.com/?apikey=280d36f8&t=infinity+war)
