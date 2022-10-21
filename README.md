@@ -53,9 +53,9 @@ Names are stated in English.
 ### Examples
 
 1.1
-> **Given** movies data is available
-> **When**  I search for "Infinity war"
-> **Then**  I should receive one result which closely matches the title along with these attributes.
+>**Given** movies data is available.
+>**When**  I search for "Infinity war".
+>**Then**  I should receive one result which closely matches the title along with these attributes.
 - Title : Avengers: Infinity War
 - Year  : 2018
 - Director(s) : Anthony Russo, Joe Russo
@@ -75,9 +75,9 @@ Names are stated in English.
 - Storyline : The Avengers and their allies must be willing to sacrifice all in an attempt to defeat the powerful Thanos before his blitz of devastation and ruin puts an end to the universe.
 
 1.2 
-**Given** movies data is available
-**When**  I search for "sklujapouetllkjsda"
-**Then**  I should receive zero results (an empty list).
+>**Given** movies data is available.
+>**When**  I search for "sklujapouetllkjsda".
+>**Then**  I should receive zero results (an empty list).
 
 ### Data Sources
  1) [OMDB API](http://www.omdbapi.com/?apikey=280d36f8&t=infinity+war)
