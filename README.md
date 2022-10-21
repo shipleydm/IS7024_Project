@@ -10,7 +10,7 @@ The web application is to provide users with the ability to enter a movie title 
 The details of the movie that will be provided will include:
 - Title
 - Year
-- Director
+- Director(s)
 - Writer(s)
 - Rating
 - Time
@@ -39,16 +39,46 @@ The details of the movie that will be provided will include:
 ## Projects
 https://github.com/users/shipleydm/projects/1/views/1
 
-## Functional Requirements
-### Requirement 1: Search for Movies
-Scenario
+# Functional Requirements
+## Requirement 1: Search for Movies
+### Scenario
 As a user interested in movies, I want to be able to search movies based on movie name or imdb id.
 
-Dependencies
-Movies search data are available and accessible.
+### Dependencies
+Movies data is available and accessible.
 
-Assumptions
+### Assumptions
 Names are stated in English.
+
+### Examples
+
+1.1
+
+**Given** movies data is available
+**When**  I search for "Infinity war"
+**Then**  I should receive one result which closely matches the title along with these attributes.
+- Title : Avengers: Infinity War
+- Year  : 2018
+- Director(s) : Anthony Russo, Joe Russo
+- Writer(s) : Christopher Markus, Stephen McFeely, Stan Lee
+- Rating : 
+    Source	:	Internet Movie Database
+    Value	:	8.4/10
+    Source	:	Rotten Tomatoes
+    Value	:	85%
+    Source	:	Metacritic
+    Value	:	68/100
+- Time :  149 min
+- Genre :  Action, Adventure, Sci-Fi
+- Cast Members : Robert Downey Jr., Chris Hemsworth, Mark Ruffalo
+- Awards : Nominated for 1 Oscar. 46 wins & 79 nominations total
+- Poster :  https://m.media-amazon.com/images/M/MV5BMjMxNjY2MDU1OV5BMl5BanBnXkFtZTgwNzY1MTUwNTM@._V1_SX300.jpg
+- Storyline : The Avengers and their allies must be willing to sacrifice all in an attempt to defeat the powerful Thanos before his blitz of devastation and ruin puts an end to the universe.
+
+1.2 
+**Given** movies data is available
+**When**  I search for "sklujapouetllkjsda"
+**Then**  I should receive zero results (an empty list).
 
 ### Data Sources
  1) [OMDB API](http://www.omdbapi.com/?apikey=280d36f8&t=infinity+war)
