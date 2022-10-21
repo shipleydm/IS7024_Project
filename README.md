@@ -52,7 +52,7 @@ Names are stated in English.
 
 ### Data Sources
  1) [OMDB API](http://www.omdbapi.com/?apikey=280d36f8&t=infinity+war)
- 2) [Streaming Availability] (https://streaming-availability.p.rapidapi.com/get/basic?country=us&tmdb_id=movie%2F120&output_language=en)
+ 2) [Streaming Availability](https://streaming-availability.p.rapidapi.com/get/basic?country=us&tmdb_id=movie%2F120&output_language=en)
 
 ## Team Composition
 ### Team Members
