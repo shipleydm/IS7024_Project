@@ -4,10 +4,10 @@
 We will be making a movie search application. Users can search for a movie and see its poster along with additional details about the movie like cast, director, and ratings. We'll also allow the users to see a trending list of popular movies.    
 
 ### Purpose
-The web application is to provide users with the ability to search for a movie information. They might be a cinephile and want to find information related to different movies or want to get ideas of what to watch next.
+The web application is to provide users with the ability to search for movie information. They might be a cinephile and want to find information related to different movies or want to get ideas of what to watch next.
 
 ### Scope
-The details of the movie that will be provided will include:
+The details of the movie that will be provided will include, but are not limited to:
 - Title
 - Year
 - Director(s)
@@ -29,13 +29,13 @@ The details of the movie that will be provided will include:
 
 
 ## Storyboard
-These storyboards provide a high-level overview of the screen designs we plan to create. Note, for simplicity sake of the designs, not every data attribute we plan to display back is shown in each section, these designs were meant to show the general look and feel of the type of infoormation users can expect. Also, there is a legend-key to aid the design visuals, this will not be implemented in the UI.
+These storyboards provide a high-level overview of the screen designs we plan to create. Note, for simplicity sake of the designs, not every data attribute we plan to display is shown in each section, these designs were meant to show the general look and feel of the type of information users can expect. Also, there is a legend-key to aid the design visuals, this will not be implemented in the UI.
 
-![StoryBoard_TopPage](https://user-images.githubusercontent.com/101297146/196309202-df4e5b28-0472-43cf-ab5c-5123df275699.png)
+![StoryBoard_TopPage](https://user-images.githubusercontent.com/101297146/196309202-df4e5b28-0472-43cf-ab5c-5123df275699.png "Screen design of movie info and poster")
 
-![StoryBoard_MiddlePage](https://user-images.githubusercontent.com/101297146/196309044-de21b5bb-b9de-4bde-b26a-4f7b250df362.png)
+![StoryBoard_MiddlePage](https://user-images.githubusercontent.com/101297146/196309044-de21b5bb-b9de-4bde-b26a-4f7b250df362.png "Screen design of an iframe for a movie trailer video")
 
-![StoryBoard_BottomPage](https://user-images.githubusercontent.com/101297146/197305127-c1c90031-d26b-4ce0-bec0-4ca78e868fe9.png)
+![StoryBoard_BottomPage](https://user-images.githubusercontent.com/101297146/197305127-c1c90031-d26b-4ce0-bec0-4ca78e868fe9.png "Screen design of movie info related to trending movies")
 
 ## Projects
 https://github.com/users/shipleydm/projects/1/views/1
@@ -91,14 +91,14 @@ Names are stated in English.
 >
 >**When**  I search for "infinity war".
 >
->**Then**  I should receive an error message with 503 internal servor error. Please try again later.
+>**Then**  I should receive an error message with 503 Service Unavailable servor error. Please try again later.
 
 ## Requirement 2: View list of trending movies
 ### Scenario
 As a user interested in movies, I want to be able to view a list of trending movies.
 
 ### Dependencies
-Trending Movies data is available and accessible.
+Trending movie data is available and accessible.
 
 ### Assumptions
 Names are stated in English.
@@ -109,7 +109,7 @@ Names are stated in English.
 
 >**Given**  trending movie data is available.
 >
->**When**  I want to view list of trending movies. 
+>**When**  I want to view a list of trending movies. 
 >
 >**Then**  I should receive results with attributes similar to the following for each movie.
 
@@ -138,14 +138,15 @@ And I should receive at least one result with these attributes:
 2.2
 >**Given**  trending movie data is unavailable.
 >
->**When**  I want to view list of trending movies. 
+>**When**  I want to view a list of trending movies. 
 >
->**Then**  I should receive an error message with 503 internal servor error. Please try again later.
+>**Then**  I should receive an error message with 503 Service Unavailable servor error. Please try again later.
 
 
 ### Data Sources
  1) [OMDB API](http://www.omdbapi.com/?apikey=280d36f8&t=infinity+war)
- 2) [Trending Movies](https://api.themoviedb.org/3/trending/movie/week?api_key=641404d7aea85802758ccd6b0857f41a)
+ 2) [Streaming Availability](https://streaming-availability.p.rapidapi.com/get/basic?country=us&tmdb_id=movie%2F120&output_language=en)
+ 3) [Trending Movies](https://api.themoviedb.org/3/trending/movie/week?api_key=641404d7aea85802758ccd6b0857f41a)
 
 ## Team Composition
 ### Team Members
