@@ -17,11 +17,12 @@ body {
   margin-bottom: 60px;
 }
 
-tr {
+// to flip table
+/*tr {
     display: block;
     float: left;
 }
 
 th, td {
     display: block;
-}
+}*/
