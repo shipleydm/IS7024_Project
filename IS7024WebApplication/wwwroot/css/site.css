@@ -26,7 +26,3 @@ body {
 th, td {
     display: block;
 }*/
-
-#movieSearchResults {
-    visibility: hidden;
-}
