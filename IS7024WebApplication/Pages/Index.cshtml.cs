@@ -1,5 +1,8 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using Newtonsoft.Json;
+using System;
+using System.Reflection;
 
 namespace IS7024WebApplication.Pages
 {
@@ -16,7 +19,11 @@ namespace IS7024WebApplication.Pages
 
         public void OnGet()
         {
-            var task = client.GetAsync("https://www.omdbapi.com/?apikey=c4dad057&t=the%20batman");
+        }
+
+        public void OnGetFormSubmit(string Movie_Title)
+        {
+            var task = client.GetAsync("https://www.omdbapi.com/?apikey=c4dad057&t=" + Movie_Title);
             HttpResponseMessage result = task.Result;
             var movie = new Movie();
             if (result.IsSuccessStatusCode)
@@ -26,10 +33,10 @@ namespace IS7024WebApplication.Pages
                 movie = Movie.FromJson(jsonString);
 
             }
-            ViewData["Movie"] = movie;
 
-
-
+            /*ViewData["Movie"] = movie;*/
+            TempData.Put("Movie", movie);
+            Response.Redirect("/SeeMovieDetails");
         }
     }
 }

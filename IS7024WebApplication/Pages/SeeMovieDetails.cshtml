@@ -1,0 +1,53 @@
+﻿@page
+@model IS7024WebApplication.Pages.SeeMovieDetailsModel
+@{
+    ViewData["Title"] = "Movie Details";
+    var movie = TempData.Get<Movie>("Movie");
+}
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Movie Details</title>
+</head>
+
+<body>
+    <img src="@movie.Poster" alt="Movie Poster">
+    <br />
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">Title</th>
+                <th scope="col">Year</th>
+                <th scope="col">Plot</th>
+                <th scope="col">Director</th>
+                <th scope="col">Cast Members</th>
+                <th scope="col">Writer</th>
+                <th scope="col">Genre</th>
+                <th scope="col">Runtime</th>
+                <th scope="col">IMDB Rating</th>
+                <th scope="col">Awards</th>
+                <th scope="col">Box Office</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td>@movie.Title</td>
+                <td>@movie.Year</td>
+                <td>@movie.Plot</td>
+                <td>@movie.Director</td>
+                <td>@movie.Actors</td>
+                <td>@movie.Writer</td>
+                <td>@movie.Genre</td>
+                <td>@movie.Runtime</td>
+                <td>@movie.ImdbRating</td>
+                <td>@movie.Awards</td>
+                <td>@movie.BoxOffice</td>
+            </tr>
+        </tbody>
+
+    </table>
+
+</body>
+</html>
