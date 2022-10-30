@@ -1,8 +1,9 @@
 ﻿@page
 @model IndexModel
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
 @{
     ViewData["Title"] = "Home page";
-    var movie = (Movie) ViewData["Movie"];
+    //var movie = (Movie) ViewData["Movie"];
 
 }
 
@@ -19,7 +20,9 @@
     </head>
 
     <body>
-    <form name="search" method="post" action="OnPost">
+
+        <form name="search" method="get">
+            <input type="hidden" name="handler" value="FormSubmit" />
             <label for="Movie_Title">Search Movie Title</label>
             <br/>
             <input type="text" name="Movie_Title"/>
@@ -27,42 +30,43 @@
             <input type="submit" value="Search"/>
         </form>
 
-        <img src="@movie.Poster" alt="Movie Poster">
-        <br />
-        <table class="table">
-            <thead>
-                <tr>
-                    <th scope="col">Title</th>
-                    <th scope="col">Year</th>
-                    <th scope="col">Plot</th>
-                    <th scope="col">Director</th>
-                    <th scope="col">Cast Members</th>
-                    <th scope="col">Writer</th>
-                    <th scope="col">Genre</th>
-                    <th scope="col">Runtime</th>
-                    <th scope="col">IMDB Rating</th>
-                    <th scope="col">Awards</th>
-                    <th scope="col">Box Office</th>
-                </tr>
-            </thead>
+        @*<div id="movieSearchResults">
+            <img src="@movie.Poster" alt="Movie Poster">
+            <br />
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">Title</th>
+                        <th scope="col">Year</th>
+                        <th scope="col">Plot</th>
+                        <th scope="col">Director</th>
+                        <th scope="col">Cast Members</th>
+                        <th scope="col">Writer</th>
+                        <th scope="col">Genre</th>
+                        <th scope="col">Runtime</th>
+                        <th scope="col">IMDB Rating</th>
+                        <th scope="col">Awards</th>
+                        <th scope="col">Box Office</th>
+                    </tr>
+                </thead>
 
-            <tbody>
-                <tr>
-                    <td>@movie.Title</td>
-                    <td>@movie.Year</td>
-                    <td>@movie.Plot</td>
-                    <td>@movie.Director</td>
-                    <td>@movie.Actors</td>
-                    <td>@movie.Writer</td>
-                    <td>@movie.Genre</td>
-                    <td>@movie.Runtime</td>
-                    <td>@movie.ImdbRating</td>
-                    <td>@movie.Awards</td>
-                    <td>@movie.BoxOffice</td>
-                </tr>
-            </tbody>
-
-        </table>
+                <tbody>
+                    <tr>
+                        <td>@movie.Title</td>
+                        <td>@movie.Year</td>
+                        <td>@movie.Plot</td>
+                        <td>@movie.Director</td>
+                        <td>@movie.Actors</td>
+                        <td>@movie.Writer</td>
+                        <td>@movie.Genre</td>
+                        <td>@movie.Runtime</td>
+                        <td>@movie.ImdbRating</td>
+                        <td>@movie.Awards</td>
+                        <td>@movie.BoxOffice</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>*@
 
     </body>
 </html>
