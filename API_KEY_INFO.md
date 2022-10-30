@@ -3,9 +3,9 @@
 The purpose of this document is to explain how to store these keys securely using the secure store, as explained below.  
 
 ### Creating & Adding to the Secret Store
-To prevent keys from being made public we are stiring our api key in the .net secret store. Follow the steps below to add to the secret store.
-1. Launch PowerShell Dev tab in .net.  
-   *If it is not displayed, click Tools > Command Line > Developer PowerShell.*
+To prevent keys from being made public we are stiring our api key in the Visual Studio secret store. Follow the steps below to add to the secret store.
+1. Launch PowerShell Dev tab in Visual Studio.  
+   *If it is not displayed, click View > Terminal or Ctrl+*
 2. Navigate to the same directory as the .csproj file.  
    *Normally this is normally one level down from the root of the project directory.*
 4. Create the file to store the api key by entering the following:  
