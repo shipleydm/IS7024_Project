@@ -159,12 +159,12 @@ namespace IS7024WebApplication
         public static StreamingAvailability FromJson(string json) => JsonConvert.DeserializeObject<StreamingAvailability>(json, IS7024WebApplication.Converter.Settings);
     }
 
-    public static class Serialize
+    public static class SerializeStreaming
     {
         public static string ToJson(this StreamingAvailability self) => JsonConvert.SerializeObject(self, IS7024WebApplication.Converter.Settings);
     }
 
-    internal static class Converter
+    internal static class ConverterStreaming
     {
         public static readonly JsonSerializerSettings Settings = new JsonSerializerSettings
         {
@@ -177,7 +177,7 @@ namespace IS7024WebApplication
         };
     }
 
-    internal class ParseStringConverter : JsonConverter
+    internal class ParseStringConverterStreaming : JsonConverter
     {
         public override bool CanConvert(Type t) => t == typeof(long) || t == typeof(long?);
 
