@@ -19,6 +19,16 @@ namespace IS7024WebApplication.Pages
 
         public void OnGet()
         {
+            var task = client.GetAsync("https://api.themoviedb.org/3/trending/movie/week?api_key=641404d7aea85802758ccd6b0857f41a");
+            HttpResponseMessage result = task.Result;
+            TrendingMovieModel trendingMovies = new TrendingMovieModel();
+            if (result.IsSuccessStatusCode)
+            {
+                Task<string> readString = result.Content.ReadAsStringAsync();
+                string jsonString = readString.Result;
+                trendingMovies = TrendingMovieModel.FromJson(jsonString);
+            }
+            ViewData["trendingMovies"] = trendingMovies;
         }
 
         public void OnGetFormSubmit(string Movie_Title)

@@ -3,6 +3,7 @@
 @addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
 @{
     ViewData["Title"] = "Home page";
+    TrendingMovieModel trendingMovies = (TrendingMovieModel)ViewData["trendingMovies"];
     //var movie = (Movie) ViewData["Movie"];
 
 }
@@ -29,6 +30,108 @@
             <br/>
             <input type="submit" value="Search"/>
         </form>
+
+        <table class="table">
+            <tr>
+                <th>
+                    adult
+                </th>
+                <th>
+                    backdrop_path   
+                </th>
+                <th>
+                    id
+                </th>
+                <th>
+                    title
+                </th>
+                <th>
+                    original_language
+                </th>
+                <th>
+                    original_title
+                </th>
+                <th>
+                    overview
+                </th>
+                <th>
+                    poster_path
+                </th>
+                <th>
+                    media_type
+                </th>
+                <th>
+                    genre_ids
+                </th>
+                <th>
+                    popularity
+                </th>
+                <th>
+                    release_date
+                </th>
+                <th>
+                    video
+                </th>
+                <th>
+                    vote_average
+                </th>
+                <th>
+                    vote_count
+                </th>
+            </tr>
+        @{
+            foreach(MovieResult movie in trendingMovies.Results){
+                <tr>
+                <td>
+                @movie.Adult
+                </td>
+                <td>
+                @movie.BackDropPath
+                </td>
+                <td>
+                @movie.Id
+                </td>
+                <td>
+                @movie.Title
+                </td>
+                <td>
+                @movie.OriginalLanguage
+                </td>
+                <td>
+                @movie.OriginalTitle
+                </td>
+                <td>
+                @movie.Overview
+                </td>
+                <td>
+                        <img src="https://image.tmdb.org/t/p/w500/@movie.PosterPath">
+                </td>
+                <td>
+                @movie.MediaType
+                </td>
+                <td>
+                @movie.GenreIds
+                </td>
+                <td>
+                @movie.Popularity
+                </td>
+                <td>
+                @movie.ReleaseDate
+                </td>
+                <td>
+                @movie.Video
+                </td>
+                <td>
+                @movie.VoteAverage
+                </td>
+                <td>
+                @movie.VoteCount
+                </td>
+                </tr>
+            }
+        }
+    </table>
+
 
         @*<div id="movieSearchResults">
             <img src="@movie.Poster" alt="Movie Poster">
