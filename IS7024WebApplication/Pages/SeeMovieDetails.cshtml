@@ -11,10 +11,41 @@
     <title>Movie Details</title>
 </head>
 
-<body>
-    <img src="@movie.Poster" alt="Movie Poster">
-    <br />
-    <table class="table">
+<body id="movieResultBody">
+    <div class="container-fluid movieResult">
+        <div class="row">
+            <div class="col-4">
+                <img src="@movie.Poster" alt="Movie Poster">
+            </div>
+            <div class="col-8">
+                <h5>Title</h5>
+                <p>@movie.Title</p>
+                <h5>Year</h5>
+                <p>@movie.Year</p>
+                <h5>Plot</h5>
+                <p>@movie.Plot</p>
+                <h5>Director</h5>
+                <p>@movie.Director</p>
+                <h5>Cast Members</h5>
+                <p>@movie.Actors</p>
+                <h5>Writer</h5>
+                <p>@movie.Writer</p>
+                <h5>Genre</h5>
+                <p>@movie.Genre</p>
+                <h5>Runtime</h5>
+                <p>@movie.Runtime</p>
+                <h5>IMDB Rating</h5>
+                <p>@movie.ImdbRating</p>
+                <h5>Awards</h5>
+                <p>@movie.Awards</p>
+                <h5>Box Office</h5>
+                <p>@movie.BoxOffice</p>
+            </div>
+        </div>
+    </div>
+
+
+    @*<table class="table">
         <thead>
             <tr>
                 <th scope="col">Title</th>
@@ -47,7 +78,7 @@
             </tr>
         </tbody>
 
-    </table>
+    </table>*@
 
 </body>
 </html>
