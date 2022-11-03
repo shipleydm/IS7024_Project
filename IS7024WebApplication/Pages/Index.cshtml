@@ -16,15 +16,24 @@
     </head>
 
     <body>
-
-        <form name="search" method="get">
+    <div class="container py-xl-5" style="background-color:lightblue">
+        <form name="search" class="mx-auto" method="get">
             <input type="hidden" name="handler" value="FormSubmit" />
-            <label for="Movie_Title">Search Movie Title</label>
+             <div class="input-group mx-auto w-75">
+                 <input class="bg-light form-control border-0 small align-content-center" type="text" placeholder="Search for movie" name="Movie_Title">
+                 <button class="btn btn-primary py-0" type="submit" value="Search/" >
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                      <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"></path>
+                    </svg>
+                 </button>
+             </div>
+            @*<label for="Movie_Title">Search Movie Title</label>
             <br/>
             <input type="text" name="Movie_Title"/>
             <br/>
-            <input type="submit" value="Search"/>
+            <input type="submit" value="Search"/>*@
         </form>
+    </div>
 
     @if(trendingMovies != null){
     <div class="container py-4 py-xl-5">
