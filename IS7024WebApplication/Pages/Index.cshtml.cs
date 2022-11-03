@@ -38,14 +38,16 @@ namespace IS7024WebApplication.Pages
             var movie = new Movie();
             if (result.IsSuccessStatusCode)
             {
-                Task<string> readString = result.Content.ReadAsStringAsync();
-                string jsonString = readString.Result;
-                movie = Movie.FromJson(jsonString);
+                Task<string> readMovieString = result.Content.ReadAsStringAsync();
+                string movieSearchResult = readMovieString.Result;
+                movie = Movie.FromJson(movieSearchResult);
 
             }
 
-            /*ViewData["Movie"] = movie;*/
+            // tempdata is needed to store and pass the data to another cshtml UI page
             TempData.Put("Movie", movie);
+
+            // redirecting to show search results in their own page
             Response.Redirect("/SeeMovieDetails");
         }
     }
