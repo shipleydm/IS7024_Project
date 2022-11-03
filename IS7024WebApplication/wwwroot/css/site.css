@@ -14,7 +14,9 @@ html {
 }
 
 body {
-  margin-bottom: 60px;
+    padding: 0;
+    margin-bottom: 60px;
+    background: #EFEFEF;
 }
 
 // to flip table
@@ -25,4 +27,7 @@ body {
 
 th, td {
     display: block;
+}*/
+/*.movieResultBodyClass #movieResultBody {
+    background: #000000;
 }*/
