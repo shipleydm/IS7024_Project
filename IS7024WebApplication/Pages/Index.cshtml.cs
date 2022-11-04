@@ -19,7 +19,10 @@ namespace IS7024WebApplication.Pages
 
         public void OnGet()
         {
-            var task = client.GetAsync("https://api.themoviedb.org/3/trending/movie/week?api_key=641404d7aea85802758ccd6b0857f41a");
+            var config = new ConfigurationBuilder().AddUserSecrets<Program>().Build();
+            string tmApiKey = config["tmApiKey"];
+            ViewData["tmApiKey"] = tmApiKey;
+            var task = client.GetAsync($"https://api.themoviedb.org/3/trending/movie/week?api_key={tmApiKey}");
             HttpResponseMessage result = task.Result;
             TrendingMovieModel trendingMovies = new TrendingMovieModel();
             if (result.IsSuccessStatusCode)
