@@ -3,6 +3,7 @@
 @{
     ViewData["Title"] = "Movie Details";
     var movie = TempData.Get<Movie>("Movie");
+    var streamingavailability = TempData.Get<StreamingAvailability>("StreamingAvailability");
 }
 <html>
 <head>
@@ -37,6 +38,22 @@
                 <p>@movie.Awards</p>
                 <h6>Box Office</h6>
                 <p>@movie.BoxOffice</p>
+                <h6>Netflix Streaming Link</h6>
+                    @if (@streamingavailability.Results.FirstOrDefault().ImdbId == movie.ImdbId)
+                    {
+                        <p><a href="@streamingavailability.Results.FirstOrDefault().StreamingInfo.Netflix.Us.Link"> WATCH NOW on Netflix! </a></p>
+                    }
+                    else if (@streamingavailability.Results.FirstOrDefault().ImdbId != movie.ImdbId)
+                    {
+                        <p>The imdbids do not match.</p>
+                    }
+                    else
+                    {
+                        <p>Not available on Netflix.</p>
+                    }
+                </p>
+                <h6>IMDBid</h6>
+                <p>@streamingavailability.Results.FirstOrDefault().ImdbId</p>
             </div>
         </div>
     </div>

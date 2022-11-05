@@ -47,8 +47,32 @@ namespace IS7024WebApplication.Pages
 
             }
 
+            //streaming availability block
+            var requestStreaming = new HttpRequestMessage
+            {
+                Method = HttpMethod.Get,
+                RequestUri = new Uri("https://streaming-availability.p.rapidapi.com/search/basic?country=us&service=netflix&type=movie&language=en&keyword=" + Movie_Title),
+                Headers =
+                {
+                    { "X-RapidAPI-Key", "8306c392d2msha2f01fa02736a36p138bc7jsn920b2226f7d5" },
+                    { "X-RapidAPI-Host", "streaming-availability.p.rapidapi.com" },
+                },
+            };
+
+            var StreamingTask = client.SendAsync(requestStreaming);
+            HttpResponseMessage StreamingResult = StreamingTask.Result;
+            var streamingavailability = new StreamingAvailability();
+            if (StreamingResult.IsSuccessStatusCode)
+            {
+                Task<string> StreamingReadMovieString = StreamingResult.Content.ReadAsStringAsync();
+                string StreamingMovieSearchResult = StreamingReadMovieString.Result;
+                streamingavailability = StreamingAvailability.FromJson(StreamingMovieSearchResult);
+
+            }
+
             // tempdata is needed to store and pass the data to another cshtml UI page
             TempData.Put("Movie", movie);
+            TempData.Put("StreamingAvailability", streamingavailability);
 
             // redirecting to show search results in their own page
             Response.Redirect("/SeeMovieDetails");
