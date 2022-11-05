@@ -180,7 +180,7 @@ namespace IS7024WebApplication
         public string Id { get; set; }
     }
 
-    public enum OriginalLanguage { En };
+    // public enum OriginalLanguage { En };
 
     public enum Iso3166_1 { Us };
 
@@ -192,12 +192,14 @@ namespace IS7024WebApplication
     {
         public static Trailer FromJson(string json) => JsonConvert.DeserializeObject<Trailer>(json, IS7024WebApplication.Converter.Settings);
     }
-
+    /*
     public static class Serialize
     {
         public static string ToJson(this Trailer self) => JsonConvert.SerializeObject(self, IS7024WebApplication.Converter.Settings);
     }
+    */
 
+    /*
     internal static class Converter
     {
         public static readonly JsonSerializerSettings Settings = new JsonSerializerSettings
@@ -214,7 +216,10 @@ namespace IS7024WebApplication
             },
         };
     }
+    */
 
+    
+    /*
     internal class OriginalLanguageConverter : JsonConverter
     {
         public override bool CanConvert(Type t) => t == typeof(OriginalLanguage) || t == typeof(OriginalLanguage?);
@@ -229,7 +234,7 @@ namespace IS7024WebApplication
             }
             throw new Exception("Cannot unmarshal type OriginalLanguage");
         }
-
+    
         public override void WriteJson(JsonWriter writer, object untypedValue, JsonSerializer serializer)
         {
             if (untypedValue == null)
@@ -248,6 +253,7 @@ namespace IS7024WebApplication
 
         public static readonly OriginalLanguageConverter Singleton = new OriginalLanguageConverter();
     }
+    */
 
     internal class Iso31661_Converter : JsonConverter
     {
