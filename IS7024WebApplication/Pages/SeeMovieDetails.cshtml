@@ -41,11 +41,11 @@
                 <h6>Netflix Streaming Link</h6>
                     @if (@streamingavailability.Results.FirstOrDefault().ImdbId == movie.ImdbId)
                     {
-                        <p><a href="@streamingavailability.Results.FirstOrDefault().StreamingInfo.Netflix.Us.Link"> WATCH NOW on Netflix! </a></p>
+                        <p><a href="@streamingavailability.Results.FirstOrDefault().StreamingInfo.Netflix.Us.Link" target="_blank"> WATCH NOW on Netflix! </a></p>
                     }
                     else if (@streamingavailability.Results.FirstOrDefault().ImdbId != movie.ImdbId)
                     {
-                        <p>The imdbids do not match.</p>
+                        <p>Not Available on Netflix.</p>
                     }
                     else
                     {

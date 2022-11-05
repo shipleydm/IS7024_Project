@@ -19,7 +19,7 @@ namespace IS7024WebApplication.Pages
 
         public void OnGet()
         {
-            var config = new ConfigurationBuilder().AddUserSecrets<Program>().Build();
+           /* var config = new ConfigurationBuilder().AddUserSecrets<Program>().Build();
             string tmApiKey = config["tmApiKey"];
             ViewData["tmApiKey"] = tmApiKey;
             var task = client.GetAsync($"https://api.themoviedb.org/3/trending/movie/week?api_key={tmApiKey}");
@@ -31,7 +31,7 @@ namespace IS7024WebApplication.Pages
                 string jsonString = readString.Result;
                 trendingMovies = TrendingMovieModel.FromJson(jsonString);
             }
-            ViewData["trendingMovies"] = trendingMovies;
+            ViewData["trendingMovies"] = trendingMovies; */
         }
 
         public void OnGetFormSubmit(string Movie_Title)
