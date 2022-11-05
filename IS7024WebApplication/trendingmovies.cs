@@ -78,9 +78,9 @@ namespace IS7024WebApplication
         public long VoteCount { get; set; }
     }
 
-    public enum MediaType { Movie };
+    public enum MediaType { Movie, All, Tv, Person };
 
-    public enum OriginalLanguage { De, En };
+    public enum OriginalLanguage { bi, cs, ba, ae, av, de, mt, om, rm, so, ts, vi, gn, ig, it, ki, ku, la, ln, lb, ny, pl, si, to, az, ce, cu, da, hz, ie, rw, mi, no, pi, sk, se, sm, uk, en, ay, ca, eo, ha, ho, hu, io, ii, kn, kv, li, oj, ru, sr, sv, ty, zu, ka, ch, be, br, kw, fi, sh, nn, tt, tg, vo, ps, mk, fr, bm, eu, fj, id, mg, na, xx, qu, sq, ti, tw, wa, ab, bs, af, an, fy, gu, ik, ja, ko, lg, nl, os, el, bn, cr, km, lo, nd, ne, sc, sw, tl, ur, ee, aa, co, et, ks, kr, ky, kj, nr, or, wo, za, ar, cv, fo, hr, ms, nb, rn, sn, st, tr, am, fa, hy, pa, ia, lv, lu, mr, mn, pt, th, tk, ve, dv, gv, kl, kk, lt, my, sl, sd, cn, hi, cy, ht, iu, jv, mh, sa, ss, te, kg, ml, uz, sg, xh, es, su, ug, yi, yo, zh, he, bo, ak, mo, ng, dz, ff, gd, ga, gl, nv, oc, ro, ta, tn, bg };
 
     public partial class TrendingMovieModel
     {
@@ -95,11 +95,7 @@ namespace IS7024WebApplication
         {
             if (reader.TokenType == JsonToken.Null) return null;
             var value = serializer.Deserialize<string>(reader);
-            if (value == "movie")
-            {
-                return MediaType.Movie;
-            }
-            throw new Exception("Cannot unmarshal type MediaType");
+            return value;
         }
 
         public override void WriteJson(JsonWriter writer, object untypedValue, JsonSerializer serializer)
@@ -110,11 +106,7 @@ namespace IS7024WebApplication
                 return;
             }
             var value = (MediaType)untypedValue;
-            if (value == MediaType.Movie)
-            {
-                serializer.Serialize(writer, "movie");
-                return;
-            }
+            
             throw new Exception("Cannot marshal type MediaType");
         }
 
@@ -129,14 +121,7 @@ namespace IS7024WebApplication
         {
             if (reader.TokenType == JsonToken.Null) return null;
             var value = serializer.Deserialize<string>(reader);
-            switch (value)
-            {
-                case "de":
-                    return OriginalLanguage.De;
-                case "en":
-                    return OriginalLanguage.En;
-            }
-            throw new Exception("Cannot unmarshal type OriginalLanguage");
+            return value;
         }
 
         public override void WriteJson(JsonWriter writer, object untypedValue, JsonSerializer serializer)
@@ -147,15 +132,6 @@ namespace IS7024WebApplication
                 return;
             }
             var value = (OriginalLanguage)untypedValue;
-            switch (value)
-            {
-                case OriginalLanguage.De:
-                    serializer.Serialize(writer, "de");
-                    return;
-                case OriginalLanguage.En:
-                    serializer.Serialize(writer, "en");
-                    return;
-            }
             throw new Exception("Cannot marshal type OriginalLanguage");
         }
 
