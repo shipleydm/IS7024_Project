@@ -70,9 +70,23 @@ namespace IS7024WebApplication.Pages
 
             }
 
+            //trailer block
+            //we must have the IMDB ID before we reach this point
+            var TrailerTask = client.GetAsync("https://api.themoviedb.org/3/movie/" + movie.ImdbId + "?api_key=a1a8968515cb189667ddfdf9860e611a&append_to_response=videos");
+            HttpResponseMessage TrailerResult = TrailerTask.Result;
+            var trailer = new Trailer();
+            if (TrailerResult.IsSuccessStatusCode)
+            {
+                Task<string> TrailerReadMovieString = TrailerResult.Content.ReadAsStringAsync();
+                string TrailerMovieSearchResult = TrailerReadMovieString.Result;
+                trailer = Trailer.FromJson(TrailerMovieSearchResult);
+
+            }
+
             // tempdata is needed to store and pass the data to another cshtml UI page
             TempData.Put("Movie", movie);
             TempData.Put("StreamingAvailability", streamingavailability);
+            TempData.Put("Trailer", trailer);
 
             // redirecting to show search results in their own page
             Response.Redirect("/SeeMovieDetails");
