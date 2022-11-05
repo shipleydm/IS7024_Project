@@ -22,6 +22,7 @@ namespace IS7024WebApplication.Pages
             var config = new ConfigurationBuilder().AddUserSecrets<Program>().Build();
             string tmApiKey = config["tmApiKey"];
             ViewData["tmApiKey"] = tmApiKey;
+
             var task = client.GetAsync($"https://api.themoviedb.org/3/trending/movie/week?api_key={tmApiKey}");
             HttpResponseMessage result = task.Result;
             TrendingMovieModel trendingMovies = new TrendingMovieModel();
@@ -36,7 +37,10 @@ namespace IS7024WebApplication.Pages
 
         public void OnGetFormSubmit(string Movie_Title)
         {
-            var task = client.GetAsync("https://www.omdbapi.com/?apikey=c4dad057&t=" + Movie_Title);
+            var config = new ConfigurationBuilder().AddUserSecrets<Program>().Build();
+            string movieSearchApikey = config["movieSearchApikey"];
+
+            var task = client.GetAsync($"https://www.omdbapi.com/?apikey={movieSearchApikey}&t=" + Movie_Title);
             HttpResponseMessage result = task.Result;
             var movie = new Movie();
             if (result.IsSuccessStatusCode)
@@ -44,7 +48,6 @@ namespace IS7024WebApplication.Pages
                 Task<string> readMovieString = result.Content.ReadAsStringAsync();
                 string movieSearchResult = readMovieString.Result;
                 movie = Movie.FromJson(movieSearchResult);
-
             }
 
             // tempdata is needed to store and pass the data to another cshtml UI page
