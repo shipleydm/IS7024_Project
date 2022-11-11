@@ -19,15 +19,37 @@ body {
     background: #EFEFEF;
 }
 
-// to flip table
-/*tr {
-    display: block;
-    float: left;
+.movieResult .card-container {
+    position: relative;
+    width: 20rem;
+    height: 562px;
+    perspective: 200rem;
 }
 
-th, td {
-    display: block;
-}*/
-/*.movieResultBodyClass #movieResultBody {
-    background: #000000;
-}*/
+.movieResult .card-container:hover .card-front {
+    transform: rotateY(180deg);
+}
+
+.movieResult .card-container:hover .card-back {
+    transform: rotateY(0deg);
+}
+
+.movieResult .card-back {
+    transform: rotateY(180deg);
+}
+
+.movieResult .card-back .card-body {
+    position: relative;
+}
+
+.movieResult .card-back .card-body {
+    color: whitesmoke;
+}
+
+.movieResult .card {
+    position: absolute;
+    transition: all 0.9s;
+    height: 100%;
+    width: 100%;
+    backface-visibility: hidden;
+}
