@@ -1,8 +1,11 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
+using Newtonsoft.Json.Schema;
 using System;
 using System.Reflection;
+using System.Text.Json.Nodes;
 
 namespace IS7024WebApplication.Pages
 {
@@ -47,7 +50,23 @@ namespace IS7024WebApplication.Pages
             {
                 Task<string> readMovieString = result.Content.ReadAsStringAsync();
                 string movieSearchResult = readMovieString.Result;
-                movie = Movie.FromJson(movieSearchResult);
+
+                // validation
+                JSchema movieSchema = JSchema.Parse(System.IO.File.ReadAllText("Schemas/movie-schema.json"));
+                JObject jsonObject = JObject.Parse(movieSearchResult);
+                IList<string> validationEvents = new List<string>();
+                if (jsonObject.IsValid(movieSchema, out validationEvents))
+                {
+                    movie = Movie.FromJson(movieSearchResult);
+                }
+                else
+                {
+                    foreach (string evt in validationEvents)
+                    {
+                        Console.WriteLine(evt);
+                    }
+                }
+                
             }
 
             // tempdata is needed to store and pass the data to another cshtml UI page

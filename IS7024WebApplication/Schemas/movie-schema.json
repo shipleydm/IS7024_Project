@@ -1,0 +1,161 @@
+{
+  "$schema": "http://json-schema.org/draft-06/schema#",
+  "$ref": "#/definitions/Movie",
+  "definitions": {
+    "Movie": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "Title": {
+          "type": "string",
+          "minLength": 1
+        },
+        "Year": {
+          "type": "string",
+          "format": "integer",
+          "minLength": 4
+        },
+        "Rated": {
+          "type": "string",
+          "minLength": 1
+        },
+        "Released": {
+          "type": "string",
+          "minLength": 1
+        },
+        "Runtime": {
+          "type": "string",
+          "minLength": 1
+        },
+        "Genre": {
+          "type": "string",
+          "minLength": 1
+        },
+        "Director": {
+          "type": "string",
+          "minLength": 1
+        },
+        "Writer": {
+          "type": "string",
+          "minLength": 1
+        },
+        "Actors": {
+          "type": "string",
+          "minLength": 1
+        },
+        "Plot": {
+          "type": "string",
+          "minLength": 1
+        },
+        "Language": {
+          "type": "string",
+          "minLength": 1
+        },
+        "Country": {
+          "type": "string",
+          "minLength": 1
+        },
+        "Awards": {
+          "type": "string"
+        },
+        "Poster": {
+          "type": "string",
+          "format": "uri",
+          "qt-uri-protocols": [
+            "https"
+          ],
+          "qt-uri-extensions": [
+            ".jpg"
+          ]
+        },
+        "Ratings": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Rating"
+          }
+        },
+        "Metascore": {
+          "type": "string",
+          "format": "integer"
+        },
+        "imdbRating": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 5
+        },
+        "imdbVotes": {
+          "type": "string"
+        },
+        "imdbID": {
+          "type": "string",
+          "minLength": 1
+        },
+        "Type": {
+          "type": "string",
+          "minLength": 1
+        },
+        "DVD": {
+          "type": "string"
+        },
+        "BoxOffice": {
+          "type": "string",
+          "minLength": 1
+        },
+        "Production": {
+          "type": "string"
+        },
+        "Website": {
+          "type": "string"
+        },
+        "Response": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "Actors",
+        "Awards",
+        "BoxOffice",
+        "Country",
+        "DVD",
+        "Director",
+        "Genre",
+        "Language",
+        "Metascore",
+        "Plot",
+        "Poster",
+        "Production",
+        "Rated",
+        "Ratings",
+        "Released",
+        "Response",
+        "Runtime",
+        "Title",
+        "Type",
+        "Website",
+        "Writer",
+        "Year",
+        "imdbID",
+        "imdbRating",
+        "imdbVotes"
+      ],
+      "title": "Movie"
+    },
+    "Rating": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "Source": {
+          "type": "string"
+        },
+        "Value": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "Source",
+        "Value"
+      ],
+      "title": "Rating"
+    }
+  }
+}
