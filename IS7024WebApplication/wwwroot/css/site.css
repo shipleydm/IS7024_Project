@@ -58,6 +58,7 @@ body {
 
 .movieResult .card-back .card-body {
     position: relative;
+    background-color: #000000;
 }
 
 .movieResult .card-back .card-body h5, .movieResult .card-back .card-body h3 {
