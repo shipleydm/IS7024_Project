@@ -17,6 +17,7 @@
     @if (movie.Response != null)
     {
         <div class="container-fluid movieResult">
+
             <div class="row">
                     <div class="col-4">
                         <div class="card-container mx-auto mt-5">
@@ -34,12 +35,6 @@
                                 </div>
                             </div>
                         </div>
-
-
-
-
-
-
 
 
                     </div>
@@ -65,11 +60,47 @@
                         <p>@movie.BoxOffice</p>
                     </div>
             </div>
+
+           @* testing*@
+            <div class="row">
+                <div class="col-12">
+                    <div class="card-container rollUpCard">
+                       <div class="poster">
+                            <img src="@movie.Poster" alt="Movie Poster">
+                       </div>
+                       <div class="details">
+                            <h2>@movie.Title (@movie.Year)<br><span>Directed by @movie.Director</span></h2>
+                       
+                            <div class="rating">
+                                <h2>Rating</h2>
+                                <p>@movie.ImdbRating</p>
+                            </div>
+                            <div class="tags">
+                                <span class="genre">Genre</span>
+                                <p>@movie.Genre</p>
+                            </div>
+                            <div class="info">
+                                <p>@movie.Plot</p>
+                            </div>
+                            <div class="star">
+                                <h4>Cast</h4>
+                                <p>@movie.Actors</p>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
         </div>
     }
     else {
         <h3>Sorry! We could not find the movie you searched for.</h3>
     }
+    <hr />
+
+   
+
 
     </body>
 </html>
