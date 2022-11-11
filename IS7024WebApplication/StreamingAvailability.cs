@@ -27,7 +27,6 @@ namespace IS7024WebApplication
     public partial class Result
     {
         [JsonProperty("age")]
-        //use datatype int for variable age
         public int Age { get; set; }
 
         [JsonProperty("backdropPath")]
