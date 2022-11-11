@@ -26,12 +26,29 @@ body {
     perspective: 200rem;
 }
 
+.movieResult .card-container mt-5 {
+    margin-top: 0;
+}
+
 .movieResult .card-container:hover .card-front {
     transform: rotateY(180deg);
 }
 
 .movieResult .card-container:hover .card-back {
     transform: rotateY(0deg);
+}
+
+.movieResult .card-container .card-body {
+    background-color: #000000;
+    color: #c0c0c0;
+}
+
+.movieResult .bi-star-fill {
+    color:gold;
+}
+
+.movieResult .card-front-text {
+    color: dimgrey;
 }
 
 .movieResult .card-back {
@@ -49,14 +66,29 @@ body {
 .movieResult .card {
     position: absolute;
     transition: all 0.9s;
-    height: 100%;
+    /*height: 100%;*/
+    height: fit-content;
     width: 100%;
     backface-visibility: hidden;
 }
 
+/*.movieResult .rating i, .movieResult .rating p {
+    float: left;
+}
+
+.movieResult .rating p {
+    margin-top: 0;
+    margin-left: 10px;
+}
+
+.movieResult .rating i {
+    color: #ff9d00;
+    margin-top: 5px;
+    margin-left: 1px;
+}*/
 
 /* card version two*/
-.rollUpCard {
+/*.rollUpCard {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -179,7 +211,7 @@ body {
     padding: 0;
     font-size: 20px;
     color: #f7f406;
-}
+}*/
 
 
 
