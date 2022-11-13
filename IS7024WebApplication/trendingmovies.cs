@@ -33,7 +33,7 @@ namespace IS7024WebApplication
     public partial class MovieResult
     {
         [JsonProperty("adult")]
-        public bool Adult { get; set; }
+        public bool IsAdult { get; set; }
 
         [JsonProperty("backdrop_path")]
         public string BackDropPath { get; set; }
@@ -69,7 +69,7 @@ namespace IS7024WebApplication
         public DateTimeOffset ReleaseDate { get; set; }
 
         [JsonProperty("video")]
-        public bool Video { get; set; }
+        public bool IsVideo { get; set; }
 
         [JsonProperty("vote_average")]
         public double VoteAverage { get; set; }
