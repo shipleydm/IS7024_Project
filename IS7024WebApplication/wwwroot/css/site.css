@@ -218,8 +218,12 @@ body {
     background: #7206f7
 }*/
 
-.rollUpCard .info {
+.rollUpCard .info p {
     color: #fff;
+}
+
+.rollUpCard .info .release-date p {
+    color: #808080;
 }
 
 .rollUpCard .info p {
