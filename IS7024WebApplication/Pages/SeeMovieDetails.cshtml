@@ -14,7 +14,7 @@
 
     <body id="movieResultBody">
 
-    @if (movie.Response != "False")
+    @if (movie.Response != null)
     {
         <div class="container-fluid movieResult">
             <div class="row">
@@ -46,7 +46,7 @@
         </div>
     }
     else {
-        <h3>Sorry! We could not find a movie by that title.</h3>
+        <h3>Sorry! We could not find the movie you searched for.</h3>
     }
 
     </body>
