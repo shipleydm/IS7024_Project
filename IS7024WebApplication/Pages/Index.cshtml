@@ -32,6 +32,15 @@
 </style>
 
     <body>
+
+    @if(trendingMovies != null){
+    <div class="container py-4 py-xl-5">
+    <div class="row mb-5 border-bottom">
+       <div class="col-md-8 col-xl-6 text-center mx-auto">
+           <h3>Trending Movies</h3>
+        </div>
+    </div>
+
     <div class="container py-xl-5" style="background-color:lightblue">
         <form name="search" class="mx-auto" method="get">
             <input type="hidden" name="handler" value="FormSubmit" />
@@ -50,14 +59,6 @@
             <input type="submit" value="Search"/>*@
         </form>
     </div>
-
-    @if(trendingMovies != null){
-    <div class="container py-4 py-xl-5">
-        <div class="row mb-5 border-bottom">
-            <div class="col-md-8 col-xl-6 text-center mx-auto">
-                <h3>Trending Movies</h3>
-            </div>
-        </div>
        
         <div class="row gy-4 row-cols-1 row-cols-md-2 row-cols-xl-3">
         @{
