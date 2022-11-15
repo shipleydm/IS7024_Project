@@ -31,3 +31,12 @@ th, td {
 /*.movieResultBodyClass #movieResultBody {
     background: #000000;
 }*/
+
+.SearchImg {
+    height: 100%;
+    padding-left: 7%;
+}
+#movieResultBody img {
+    height: 100%;
+    padding-left: 7%;
+}

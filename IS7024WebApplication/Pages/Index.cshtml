@@ -48,9 +48,10 @@
             {
                     <div class="card-group">
                         <div class="card">
-                        <img class="card-img-top w-100 d-block fit-cover" style="height: 300px;" src="https://image.tmdb.org/t/p/w500/@movie.PosterPath" alt="Image of the movie"/>
+                        <!-- Changing image height and conventing px to % for resposiveness -->
+                        <img class="card-img-top w-100 d-block fit-cover" style="height: 55%;" src="https://image.tmdb.org/t/p/w500/@movie.PosterPath" alt="Image of the movie"/>
                         <div class="card-body p-4">
-                            <p class="text-primary card-text mb-0">Movie</p>
+                            <p class="card-text mb-0">Movie</p>
                             <h4 class="card-title"><a> @movie.Title</a></h4>
                             <p class="card-text">@movie.Overview</p>
                         </div>
@@ -68,7 +69,7 @@
                                         <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
                                     </svg>
                                     <strong>@movie.VoteAverage</strong>
-                                            </span>
+                                    </span>
                                 </div>
                                 <small class="text-muted">@movie.ReleaseDate.Date.ToShortDateString()</small>
                             </div>
