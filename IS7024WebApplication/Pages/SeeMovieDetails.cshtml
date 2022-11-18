@@ -77,7 +77,7 @@
                     }
                     else if (@streamingavailability.Results.FirstOrDefault().ImdbId == movie.ImdbId)
                     {
-                        <p>&#9989; <a href="@streamingavailability.Results.FirstOrDefault().StreamingInfo.Netflix.Us.Link" target="_blank">Watch Now On Netflix </a></p>
+                        <p>&#9989; <a href="@streamingavailability.Results.FirstOrDefault().StreamingInfo.Netflix.Us.Link" target="_blank">WATCH NOW On Netflix </a></p>
                     }
                     else if (@streamingavailability.Results.FirstOrDefault().ImdbId != movie.ImdbId)
                     {
@@ -94,9 +94,9 @@
                     }
                     else
                     {
-                    <h6>&#9989; Trailer: @trailer.Videos.Results.FirstOrDefault().Key </h6>
-                    <iframe width="50%" src="https://www.youtube.com/embed/@trailer.Videos.Results.FirstOrDefault().Key" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                    <p><a href="https://www.youtube.com/watch?v=@trailer.Videos.Results.FirstOrDefault().Key"> Trailer </a></p>
+                        <p>&#9989; <a href="https://www.youtube.com/watch?v=@trailer.Videos.Results.FirstOrDefault().Key"> WATCH the Trailer NOW</a></p>
+                        <iframe src="https://www.youtube.com/embed/@trailer.Videos.Results.FirstOrDefault().Key" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
                     }
 
                 </div>
