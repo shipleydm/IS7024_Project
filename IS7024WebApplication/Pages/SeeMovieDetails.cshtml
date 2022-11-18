@@ -4,7 +4,7 @@
     ViewData["Title"] = "Movie Details";
     var movie = TempData.Get<Movie>("Movie");
     var streamingavailability = TempData.Get<StreamingAvailability>("StreamingAvailability");
-
+    var trailer = TempData.Get<Trailer>("Trailer");
 }
 <html>
     <head>
@@ -87,6 +87,18 @@
                     {
                         <p>&#10060; Not Available on Netflix</p>
                     }
+
+                    @if (trailer.Videos.Results.Count == 0)
+                    {
+                        <p>&#10060; Trailers not available at this time</p>
+                    }
+                    else
+                    {
+                    <h6>&#9989; Trailer: @trailer.Videos.Results.FirstOrDefault().Key </h6>
+                    <iframe width="50%" src="https://www.youtube.com/embed/@trailer.Videos.Results.FirstOrDefault().Key" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <p><a href="https://www.youtube.com/watch?v=@trailer.Videos.Results.FirstOrDefault().Key"> Trailer </a></p>
+                    }
+
                 </div>
             </div>
         </div>
