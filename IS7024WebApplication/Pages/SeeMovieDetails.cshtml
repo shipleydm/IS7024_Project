@@ -25,7 +25,7 @@
                         <div class="card card-front">
                             <img class="card-img-top" src="@movie.Poster" alt="Movie Poster for @movie.Title">
                             <div class="card-body">
-                                <h6>@movie.Title (@movie.Year)</h6>
+                                <h6>@movie.Title (@movie.releaseYear)</h6>
                                 <span class="card-front-text">      
                                     @movie.Rated / @movie.Runtime / @movie.Genre
                                 </span>
@@ -34,7 +34,7 @@
 
                         <div class="card card-back">
                             <div class="card-body">
-                                <h3 class="card-title back">@movie.Title (@movie.Year)</h3>
+                                <h3 class="card-title back">@movie.Title (@movie.releaseYear)</h3>
                             <hr />
                                 <div class="Rating">
                                     <span class="rating-header"><h5>IMDB Rating</h5></span>
@@ -60,7 +60,7 @@
 
                 </div>
                 <div class="col-8">
-                    <h4>@movie.Title (@movie.Year)</h4>
+                    <h4>@movie.Title (@movie.releaseYear)</h4>
                     <h6>Director</h6>
                     <p>@movie.Director</p>
                     <h6>Writer</h6>
