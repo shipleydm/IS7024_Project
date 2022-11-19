@@ -67,7 +67,7 @@ namespace IS7024WebApplication
 
         [JsonProperty("Metascore")]
         [JsonConverter(typeof(ParseStringConverter))]
-        public int Metascore { get; set; }
+        public Int64 Metascore { get; set; }
 
         [JsonProperty("imdbRating")]
         public string ImdbRating { get; set; }
