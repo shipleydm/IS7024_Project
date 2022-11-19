@@ -5,6 +5,7 @@
     var movie = TempData.Get<Movie>("Movie");
     var streamingavailability = TempData.Get<StreamingAvailability>("StreamingAvailability");
     var trailer = TempData.Get<Trailer>("Trailer");
+    var numberOfTrailers = trailer.Videos.Results.Count;
 }
 <html>
     <head>
@@ -71,6 +72,7 @@
                     <p>@movie.Awards</p>
                     <h6>Box Office</h6>
                     <p>@movie.BoxOffice</p>
+
                     @if (@streamingavailability.Results.Count == 0)
                     {
                         <p>&#10060; Not Available on Netflix</p>
@@ -88,15 +90,15 @@
                         <p>&#10060; Not Available on Netflix</p>
                     }
 
-                    @if (trailer.Videos.Results.Count == 0)
+                    @if (numberOfTrailers == 0)
                     {
                         <p>&#10060; Trailers not available at this time</p>
                     }
                     else
                     {
-                        <p>&#9989; <a href="https://www.youtube.com/watch?v=@trailer.Videos.Results.FirstOrDefault().Key"> WATCH the Trailer NOW</a></p>
-                        <iframe src="https://www.youtube.com/embed/@trailer.Videos.Results.FirstOrDefault().Key" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
+                    }
+                     <p>&#9989; <a href="https://www.youtube.com/watch?v=@trailer.Videos.Results.FirstOrDefault().Key"> WATCH the Trailer NOW (@trailer.Videos.Results.FirstOrDefault(trailerItem).Key)</a></p>
+                     <iframe src="https://www.youtube.com/embed/@trailer.Videos.Results.FirstOrDefault().Key" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     }
 
                 </div>

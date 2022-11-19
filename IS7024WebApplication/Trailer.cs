@@ -153,7 +153,7 @@ namespace IS7024WebApplication
         public OriginalLanguage Iso639_1 { get; set; }
 
         [JsonProperty("iso_3166_1")]
-        public Iso3166_1 Iso3166_1 { get; set; }
+        public string Iso3166_1 { get; set; }
 
         [JsonProperty("name")]
         public string Name { get; set; }
@@ -165,207 +165,29 @@ namespace IS7024WebApplication
         public DateTimeOffset PublishedAt { get; set; }
 
         [JsonProperty("site")]
-        public Site Site { get; set; }
+        public string Site { get; set; }
 
         [JsonProperty("size")]
         public long Size { get; set; }
 
         [JsonProperty("type")]
-        public TypeEnum Type { get; set; }
+        public string Type { get; set; }
 
-        [JsonProperty("official")]
         public bool Official { get; set; }
 
         [JsonProperty("id")]
         public string Id { get; set; }
     }
 
-    // public enum OriginalLanguage { En };
 
-    public enum Iso3166_1 { Us };
+    //public string Iso3166_1 { get; set; }
 
-    public enum Site { YouTube };
+    //public string Site { get; set; }
 
-    public enum TypeEnum { Featurette, Teaser, Trailer };
 
     public partial class Trailer
     {
         public static Trailer FromJson(string json) => JsonConvert.DeserializeObject<Trailer>(json, IS7024WebApplication.Converter.Settings);
     }
-    /*
-    public static class Serialize
-    {
-        public static string ToJson(this Trailer self) => JsonConvert.SerializeObject(self, IS7024WebApplication.Converter.Settings);
-    }
-    */
-
-    /*
-    internal static class Converter
-    {
-        public static readonly JsonSerializerSettings Settings = new JsonSerializerSettings
-        {
-            MetadataPropertyHandling = MetadataPropertyHandling.Ignore,
-            DateParseHandling = DateParseHandling.None,
-            Converters =
-            {
-                OriginalLanguageConverter.Singleton,
-                Iso31661_Converter.Singleton,
-                SiteConverter.Singleton,
-                TypeEnumConverter.Singleton,
-                new IsoDateTimeConverter { DateTimeStyles = DateTimeStyles.AssumeUniversal }
-            },
-        };
-    }
-    */
-
-
-    /*
-    internal class OriginalLanguageConverter : JsonConverter
-    {
-        public override bool CanConvert(Type t) => t == typeof(OriginalLanguage) || t == typeof(OriginalLanguage?);
-
-        public override object ReadJson(JsonReader reader, Type t, object existingValue, JsonSerializer serializer)
-        {
-            if (reader.TokenType == JsonToken.Null) return null;
-            var value = serializer.Deserialize<string>(reader);
-            if (value == "en")
-            {
-                return OriginalLanguage.En;
-            }
-            throw new Exception("Cannot unmarshal type OriginalLanguage");
-        }
-    
-        public override void WriteJson(JsonWriter writer, object untypedValue, JsonSerializer serializer)
-        {
-            if (untypedValue == null)
-            {
-                serializer.Serialize(writer, null);
-                return;
-            }
-            var value = (OriginalLanguage)untypedValue;
-            if (value == OriginalLanguage.En)
-            {
-                serializer.Serialize(writer, "en");
-                return;
-            }
-            throw new Exception("Cannot marshal type OriginalLanguage");
-        }
-
-        public static readonly OriginalLanguageConverter Singleton = new OriginalLanguageConverter();
-    }
-    */
-
-    internal class Iso31661_Converter : JsonConverter
-    {
-        public override bool CanConvert(Type t) => t == typeof(Iso3166_1) || t == typeof(Iso3166_1?);
-
-        public override object ReadJson(JsonReader reader, Type t, object existingValue, JsonSerializer serializer)
-        {
-            if (reader.TokenType == JsonToken.Null) return null;
-            var value = serializer.Deserialize<string>(reader);
-            if (value == "US")
-            {
-                return Iso3166_1.Us;
-            }
-            throw new Exception("Cannot unmarshal type Iso3166_1");
-        }
-
-        public override void WriteJson(JsonWriter writer, object untypedValue, JsonSerializer serializer)
-        {
-            if (untypedValue == null)
-            {
-                serializer.Serialize(writer, null);
-                return;
-            }
-            var value = (Iso3166_1)untypedValue;
-            if (value == Iso3166_1.Us)
-            {
-                serializer.Serialize(writer, "US");
-                return;
-            }
-            throw new Exception("Cannot marshal type Iso3166_1");
-        }
-
-        public static readonly Iso31661_Converter Singleton = new Iso31661_Converter();
-    }
-
-    internal class SiteConverter : JsonConverter
-    {
-        public override bool CanConvert(Type t) => t == typeof(Site) || t == typeof(Site?);
-
-        public override object ReadJson(JsonReader reader, Type t, object existingValue, JsonSerializer serializer)
-        {
-            if (reader.TokenType == JsonToken.Null) return null;
-            var value = serializer.Deserialize<string>(reader);
-            if (value == "YouTube")
-            {
-                return Site.YouTube;
-            }
-            throw new Exception("Cannot unmarshal type Site");
-        }
-
-        public override void WriteJson(JsonWriter writer, object untypedValue, JsonSerializer serializer)
-        {
-            if (untypedValue == null)
-            {
-                serializer.Serialize(writer, null);
-                return;
-            }
-            var value = (Site)untypedValue;
-            if (value == Site.YouTube)
-            {
-                serializer.Serialize(writer, "YouTube");
-                return;
-            }
-            throw new Exception("Cannot marshal type Site");
-        }
-
-        public static readonly SiteConverter Singleton = new SiteConverter();
-    }
-
-    internal class TypeEnumConverter : JsonConverter
-    {
-        public override bool CanConvert(Type t) => t == typeof(TypeEnum) || t == typeof(TypeEnum?);
-
-        public override object ReadJson(JsonReader reader, Type t, object existingValue, JsonSerializer serializer)
-        {
-            if (reader.TokenType == JsonToken.Null) return null;
-            var value = serializer.Deserialize<string>(reader);
-            switch (value)
-            {
-                case "Featurette":
-                    return TypeEnum.Featurette;
-                case "Teaser":
-                    return TypeEnum.Teaser;
-                case "Trailer":
-                    return TypeEnum.Trailer;
-            }
-            throw new Exception("Cannot unmarshal type TypeEnum");
-        }
-
-        public override void WriteJson(JsonWriter writer, object untypedValue, JsonSerializer serializer)
-        {
-            if (untypedValue == null)
-            {
-                serializer.Serialize(writer, null);
-                return;
-            }
-            var value = (TypeEnum)untypedValue;
-            switch (value)
-            {
-                case TypeEnum.Featurette:
-                    serializer.Serialize(writer, "Featurette");
-                    return;
-                case TypeEnum.Teaser:
-                    serializer.Serialize(writer, "Teaser");
-                    return;
-                case TypeEnum.Trailer:
-                    serializer.Serialize(writer, "Trailer");
-                    return;
-            }
-            throw new Exception("Cannot marshal type TypeEnum");
-        }
-
-        public static readonly TypeEnumConverter Singleton = new TypeEnumConverter();
-    }
 }
+  
