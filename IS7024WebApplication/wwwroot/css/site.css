@@ -18,6 +18,7 @@ html {
 #fa5b3d - soda ornage
 #F57634 - gulf orange
 #FFF8EF - cream white
+#269FFE - aqua blue
 */
 
 body {
@@ -26,10 +27,11 @@ body {
     /*background: #EFEFEF;*/
     /* background: #001328;*/
     /*background: #001F41;*/
-    background: #181e20; /*shark*/
+    background: #181e20; /*shark #181e20*/
     /*background-image: linear-gradient(to right, #0f0c29, #302b63, #24243e);*/
     /*background: #003153;*/
     /*background: linear-gradient(360deg, #1C1C1C 10%, #494949 360%);*/ /*black chrome*/
+    /*background-image: linear-gradient(to right, #8e2de2, #4a00e0);*/
 }
 
 .navbar {
@@ -40,7 +42,7 @@ body {
 }
 
 .input-group .btn {
-    background-color: #fa5b3d;
+    background-color: #269FFE;
     border: none;
     color: black;
 }
@@ -50,7 +52,7 @@ body {
 }
 
 .trending-movies {
-    color: #A1DDED;
+    color: #269FFE;
 }
 
 .card {
@@ -58,7 +60,7 @@ body {
 }
 
 .movie-side-text h4 {
-    color: #A1DDED;
+    color: #269FFE;
 }
 
 .movie-side-text h6 {
