@@ -13,6 +13,13 @@ html {
   min-height: 100%;
 }
 
+/* color codes
+#A1DDED - gulf blue
+#fa5b3d - soda ornage
+#F57634 - gulf orange
+#FFF8EF - cream white
+*/
+
 body {
     padding: 0;
     margin-bottom: 70px;
@@ -28,13 +35,38 @@ body {
 .navbar {
     /*background: #0008a3;*/
     /* background: #0700C4;*/ /*brighter*/
-    background: #1134A6;
-    /*background: ;*/
+    /*background: #1134A6;*/
+    background: black;
 }
 
+.input-group .btn {
+    background-color: #fa5b3d;
+    border: none;
+    color: black;
+}
+
+.input-group .form-control {
+    background-color: #FFF8EF;
+}
+
+.trending-movies {
+    color: #A1DDED;
+}
 
 .card {
     border: none;
+}
+
+.movie-side-text h4 {
+    color: #A1DDED;
+}
+
+.movie-side-text h6 {
+    color: #fa5b3d;
+}
+
+.movie-side-text p, h3 {
+    color: white;
 }
 
 .movieResult .card-container {
