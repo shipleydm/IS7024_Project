@@ -28,12 +28,10 @@ body {
     border: none;
 }
 
-/* new overlay*/
 .movieResult .card {
     position: absolute;
     transition: all 0.9s;
     height: 100%;
-    /*height: fit-content;*/
     width: 100%;
     backface-visibility: hidden;
     box-shadow: 0 5px 10px rgba(0,0,0,0.5);
@@ -58,7 +56,6 @@ body {
     background: linear-gradient(0deg, #000 50%, transparent);
 }
 
-
 .movieResult .card-front .poster img {
     width: 100%;
 }
@@ -72,9 +69,6 @@ body {
     left: 0;
     box-sizing: border-box;
 }
-
-
-/*-------------------*/
 
 .movieResult .card-container {
     position: relative;
