@@ -56,8 +56,9 @@ body {
     background: linear-gradient(0deg, #000 50%, transparent);
 }
 
-.movieResult .card-front .poster img {
+.movieResult .card-front .poster .responsive-image {
     width: 100%;
+    height: auto;
 }
 
 .movieResult .card-front .details {
