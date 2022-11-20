@@ -23,10 +23,11 @@
                     <div class="card-container mx-auto">
 
                         <div class="card card-front">
-                            <img class="card-img-top" src="@movie.Poster" alt="Movie Poster for @movie.Title">
-                            <div class="card-body">
-                                <h6>@movie.Title (@movie.releaseYear)</h6>
-                                <span class="card-front-text">      
+                            <div class="poster">
+                                <img src="@movie.Poster" alt="Movie Poster for @movie.Title">
+                            </div>
+                            <div class="details">
+                                <span class="card-front-text">
                                     @movie.Rated / @movie.Runtime / @movie.Genre
                                 </span>
                             </div>

@@ -28,10 +28,54 @@ body {
     border: none;
 }
 
+/* new overlay*/
+.movieResult .card {
+    position: absolute;
+    transition: all 0.9s;
+    height: 100%;
+    /*height: fit-content;*/
+    width: 100%;
+    backface-visibility: hidden;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.5);
+}
+
+.movieResult .card-front .poster {
+    position: relative;
+    overflow: hidden;
+}
+
+.movieResult .card-front .poster:before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(0deg, #000 20%, transparent);
+}
+
+
+.movieResult .card-front .poster img {
+    width: 100%;
+}
+
+.movieResult .card-front .details {
+    position: absolute;
+    padding: 20px;
+    height: 60%;
+    width: 100%;
+    bottom: -240px;
+    left: 0;
+    box-sizing: border-box;
+}
+
+
+/**/
+
 .movieResult .card-container {
     position: relative;
     width: 20rem;
-    height: 562px;
+    height: 520px;
     perspective: 200rem;
 }
 
@@ -58,7 +102,7 @@ body {
 
 .movieResult .card-front-text {
     color: dimgrey;
-    font-size: 13px;
+    font-size: 14px;
 }
 
 .movieResult .card-back {
@@ -78,15 +122,6 @@ body {
     color: #c0c0c0;
 }
 
-.movieResult .card {
-    position: absolute;
-    transition: all 0.9s;
-    height: 100%;
-    /*height: fit-content;*/
-    width: 100%;
-    backface-visibility: hidden;
-    box-shadow: 0 5px 10px rgba(0,0,0,0.5);
-}
 
 /*.movieResult .rating i, .movieResult .rating p {
     float: left;
@@ -118,7 +153,6 @@ body {
 .rollUpCard .poster {
     position: relative;
     overflow: hidden;
-
 }
 
 .card-group .rollUpCard .poster:before {
