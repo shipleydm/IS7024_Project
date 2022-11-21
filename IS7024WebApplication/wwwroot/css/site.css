@@ -38,7 +38,8 @@ body {
     /*background: #0008a3;*/
     /* background: #0700C4;*/ /*brighter*/
     /*background: #1134A6;*/
-    background: black;
+    background: #181e20;
+    border-bottom: 0.8px solid #3c3e41;
 }
 
 .input-group .btn {
@@ -87,7 +88,7 @@ body {
 .movieResult .card-front .poster {
     position: relative;
     overflow: hidden;
-    border-radius: 5px;
+    border-radius: 3px;
 }
 
 .movieResult .card-front .poster:before {
@@ -164,7 +165,7 @@ body {
     font-size: 14px;
     display: inline-block;
     border-radius: 4px;
-    background: #181e20;
+    background: #1b1b1d;
 }
 
 .movieResult .card-back {
