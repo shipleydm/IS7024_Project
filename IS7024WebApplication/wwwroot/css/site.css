@@ -44,6 +44,7 @@ body {
 .movieResult .card-front .poster {
     position: relative;
     overflow: hidden;
+    border-radius: 5px;
 }
 
 .movieResult .card-front .poster:before {
