@@ -22,7 +22,7 @@ namespace IS7024WebApplication
 
         [JsonProperty("Year")]
         [JsonConverter(typeof(ParseStringConverter))]
-        public long Year { get; set; }
+        public long releaseYear { get; set; }
 
         [JsonProperty("Rated")]
         public string Rated { get; set; }
@@ -64,8 +64,7 @@ namespace IS7024WebApplication
         public List<Rating> Ratings { get; set; }
 
         [JsonProperty("Metascore")]
-        [JsonConverter(typeof(ParseStringConverter))]
-        public long Metascore { get; set; }
+        public string Metascore { get; set; }
 
         [JsonProperty("imdbRating")]
         public string ImdbRating { get; set; }

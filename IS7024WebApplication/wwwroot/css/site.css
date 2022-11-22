@@ -13,25 +13,113 @@ html {
   min-height: 100%;
 }
 
+/* color codes
+#A1DDED - gulf blue
+#fa5b3d - soda ornage
+#F57634 - gulf orange
+#FFF8EF - cream white
+#269FFE - aqua blue
+*/
+
 body {
     padding: 0;
     margin-bottom: 70px;
-    background: #EFEFEF;
+    /*background: #EFEFEF;*/
     /* background: #001328;*/
     /*background: #001F41;*/
-    /*background: #181e20;*/
+    background: #181e20; /*shark #181e20*/
     /*background-image: linear-gradient(to right, #0f0c29, #302b63, #24243e);*/
+    /*background: #003153;*/
+    /*background: linear-gradient(360deg, #1C1C1C 10%, #494949 360%);*/ /*black chrome*/
+    /*background-image: linear-gradient(to right, #8e2de2, #4a00e0);*/
 }
 
+.navbar {
+    /*background: #0008a3;*/
+    /* background: #0700C4;*/ /*brighter*/
+    /*background: #1134A6;*/
+    background: #181e20;
+    border-bottom: 0.8px solid #3c3e41;
+}
+
+.input-group .btn {
+    background-color: #269FFE;
+    border: none;
+    color: black;
+}
+
+.input-group .form-control {
+    background-color: #FFF8EF;
+}
+
+.trending-movies {
+    color: #269FFE;
+}
 
 .card {
     border: none;
 }
 
+.movie-side-text h4 {
+    color: #269FFE;
+}
+
+.movie-side-text h6 {
+    color: #fa5b3d;
+}
+
+.movie-side-text p, h3 {
+    color: white;
+}
+
+.movieResult .card {
+    position: absolute;
+    transition: all 0.9s;
+    height: 100%;
+    width: 100%;
+    backface-visibility: hidden;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.5);
+}
+
+.movieResult .card-front {
+    background-color: black;
+}
+
+.movieResult .card-front .poster {
+    position: relative;
+    overflow: hidden;
+    border-radius: 3px;
+}
+
+.movieResult .card-front .poster:before {
+    content: '';
+    position: absolute;
+    bottom: -260px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(0deg, #000 50%, transparent);
+}
+
+.movieResult .card-front .poster .responsive-image {
+    width: 100%;
+    height: auto;
+}
+
+.movieResult .card-front .details {
+    position: absolute;
+    padding: 20px;
+    height: 60%;
+    width: 100%;
+    bottom: -255px;
+    left: 0;
+    box-sizing: border-box;
+}
+
 .movieResult .card-container {
     position: relative;
     width: 20rem;
-    height: 562px;
+    height: 520px;
     perspective: 200rem;
 }
 
@@ -58,7 +146,26 @@ body {
 
 .movieResult .card-front-text {
     color: dimgrey;
-    font-size: 13px;
+    font-size: 14px;
+}
+
+.movieResult .tags {
+    position: relative;
+    margin-top: 5px;
+    padding-left: 4px;
+    padding-right: 4px;
+    text-align: center;
+}
+
+.movieResult .tags span {
+    padding: 2px 5px;
+    margin-right: 2px;
+    margin-left: 2px;
+    color: dimgrey;
+    font-size: 14px;
+    display: inline-block;
+    border-radius: 4px;
+    background: #1b1b1d;
 }
 
 .movieResult .card-back {
@@ -78,15 +185,6 @@ body {
     color: #c0c0c0;
 }
 
-.movieResult .card {
-    position: absolute;
-    transition: all 0.9s;
-    height: 100%;
-    /*height: fit-content;*/
-    width: 100%;
-    backface-visibility: hidden;
-    box-shadow: 0 5px 10px rgba(0,0,0,0.5);
-}
 
 /*.movieResult .rating i, .movieResult .rating p {
     float: left;
@@ -118,7 +216,6 @@ body {
 .rollUpCard .poster {
     position: relative;
     overflow: hidden;
-
 }
 
 .card-group .rollUpCard .poster:before {
