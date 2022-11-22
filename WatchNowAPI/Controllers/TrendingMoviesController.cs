@@ -1,4 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Newtonsoft.Json.Linq;
+using Newtonsoft.Json.Schema;
 
 namespace WatchNowAPI.Controllers
 {
@@ -25,7 +27,22 @@ namespace WatchNowAPI.Controllers
             {
                 Task<string> readString = result.Content.ReadAsStringAsync();
                 string jsonString = readString.Result;
-                trendingMovies = TrendingMovieModel.FromJson(jsonString);
+
+                // validation
+                JSchema movieSchema = JSchema.Parse(System.IO.File.ReadAllText("Schemas/trending-movies-schema.json"));
+                JObject jsonObject = JObject.Parse(jsonString);
+                IList<string> validationEvents = new List<string>();
+                if (jsonObject.IsValid(movieSchema, out validationEvents))
+                {
+                    trendingMovies = TrendingMovieModel.FromJson(jsonString);
+                }
+                else
+                {
+                    foreach (string evt in validationEvents)
+                    {
+                        Console.WriteLine(evt);
+                    }
+                }
             }
 
             return trendingMovies;

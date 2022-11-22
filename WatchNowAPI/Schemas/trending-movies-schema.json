@@ -1,0 +1,319 @@
+{
+  "$schema": "http://json-schema.org/draft-06/schema#",
+  "$ref": "#/definitions/Movie",
+  "definitions": {
+    "Movie": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "page": {
+          "type": "integer", 
+          "minimum": 1
+        },
+        "results": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Result"
+          }
+        },
+        "total_pages": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "total_results": {
+          "type": "integer",
+          "minimum": 0
+        }
+      },
+      "required": [
+        "page",
+        "results",
+        "total_pages",
+        "total_results"
+      ],
+      "title": "Movie"
+    },
+    "Result": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "adult": {
+          "type": "boolean"
+        },
+        "backdrop_path": {
+          "type": "string"
+        },
+        "id": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "title": {
+          "type": "string",
+          "minLength": 1
+        },
+        "original_language": {
+          "$ref": "#/definitions/OriginalLanguage"
+        },
+        "original_title": {
+          "type": "string"
+        },
+        "overview": {
+          "type": "string",
+          "minLength": 1
+        },
+        "poster_path": {
+          "type": "string"
+        },
+        "media_type": {
+          "$ref": "#/definitions/MediaType"
+        },
+        "genre_ids": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        },
+        "popularity": {
+          "type": "number",
+          "minimum": 0
+        },
+        "release_date": {
+          "type": "string",
+          "format": "date",
+          "minLength": 1
+        },
+        "video": {
+          "type": "boolean"
+        },
+        "vote_average": {
+          "type": "number",
+          "maximum": 10
+        },
+        "vote_count": {
+          "type": "integer",
+          "minimum": 0
+        }
+      },
+      "required": [
+        "adult",
+        "backdrop_path",
+        "genre_ids",
+        "id",
+        "media_type",
+        "original_language",
+        "original_title",
+        "overview",
+        "popularity",
+        "poster_path",
+        "release_date",
+        "title",
+        "video",
+        "vote_average",
+        "vote_count"
+      ],
+      "title": "Result"
+    },
+    "MediaType": {
+      "type": "string",
+      "enum": [
+        "movie",
+        "all",
+        "tv",
+        "person"
+      ],
+      "title": "MediaType"
+    },
+    "OriginalLanguage": {
+      "type": "string",
+      "enum": [
+        "bi",
+        "cs",
+        "ba",
+        "ae",
+        "av",
+        "de",
+        "mt",
+        "om",
+        "rm",
+        "so",
+        "ts",
+        "vi",
+        "gn",
+        "ig",
+        "it",
+        "ki",
+        "ku",
+        "la",
+        "ln",
+        "lb",
+        "ny",
+        "pl",
+        "si",
+        "to",
+        "az",
+        "ce",
+        "cu",
+        "da",
+        "hz",
+        "ie",
+        "rw",
+        "mi",
+        "no",
+        "pi",
+        "sk",
+        "se",
+        "sm",
+        "uk",
+        "en",
+        "ay",
+        "ca",
+        "eo",
+        "ha",
+        "ho",
+        "hu",
+        "io",
+        "ii",
+        "kn",
+        "kv",
+        "li",
+        "oj",
+        "ru",
+        "sr",
+        "sv",
+        "ty",
+        "zu",
+        "ka",
+        "ch",
+        "be",
+        "br",
+        "kw",
+        "fi",
+        "sh",
+        "nn",
+        "tt",
+        "tg",
+        "vo",
+        "ps",
+        "mk",
+        "fr",
+        "bm",
+        "eu",
+        "fj",
+        "id",
+        "mg",
+        "na",
+        "xx",
+        "qu",
+        "sq",
+        "ti",
+        "tw",
+        "wa",
+        "ab",
+        "bs",
+        "af",
+        "an",
+        "fy",
+        "gu",
+        "ik",
+        "ja",
+        "ko",
+        "lg",
+        "nl",
+        "os",
+        "el",
+        "bn",
+        "cr",
+        "km",
+        "lo",
+        "nd",
+        "ne",
+        "sc",
+        "sw",
+        "tl",
+        "ur",
+        "ee",
+        "aa",
+        "co",
+        "et",
+        "ks",
+        "kr",
+        "ky",
+        "kj",
+        "nr",
+        "or",
+        "wo",
+        "za",
+        "ar",
+        "cv",
+        "fo",
+        "hr",
+        "ms",
+        "nb",
+        "rn",
+        "sn",
+        "st",
+        "tr",
+        "am",
+        "fa",
+        "hy",
+        "pa",
+        "ia",
+        "lv",
+        "lu",
+        "mr",
+        "mn",
+        "pt",
+        "th",
+        "tk",
+        "ve",
+        "dv",
+        "gv",
+        "kl",
+        "kk",
+        "lt",
+        "my",
+        "sl",
+        "sd",
+        "cn",
+        "hi",
+        "cy",
+        "ht",
+        "iu",
+        "jv",
+        "mh",
+        "sa",
+        "ss",
+        "te",
+        "kg",
+        "ml",
+        "uz",
+        "sg",
+        "xh",
+        "es",
+        "su",
+        "ug",
+        "yi",
+        "yo",
+        "zh",
+        "he",
+        "bo",
+        "ak",
+        "mo",
+        "ng",
+        "dz",
+        "ff",
+        "gd",
+        "ga",
+        "gl",
+        "nv",
+        "oc",
+        "ro",
+        "ta",
+        "tn",
+        "bg "
+      ],
+      "title": "OriginalLanguage"
+    }
+  }
+}
+
