@@ -60,6 +60,10 @@ body {
     border: none;
 }
 
+.movie-side-text {
+    padding-top: 10px;
+}
+
 .movie-side-text h4 {
     color: #269FFE;
 }
@@ -72,136 +76,91 @@ body {
     color: white;
 }
 
-.movieResult .card {
-    position: absolute;
-    transition: all 0.9s;
-    height: 100%;
-    width: 100%;
-    backface-visibility: hidden;
-    box-shadow: 0 5px 10px rgba(0,0,0,0.5);
-}
-
-.movieResult .card-front {
-    background-color: black;
-}
-
-.movieResult .card-front .poster {
-    position: relative;
-    overflow: hidden;
-    border-radius: 3px;
-}
-
-.movieResult .card-front .poster:before {
-    content: '';
-    position: absolute;
-    bottom: -260px;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(0deg, #000 50%, transparent);
-}
-
-.movieResult .card-front .poster .responsive-image {
-    width: 100%;
-    height: auto;
-}
-
-.movieResult .card-front .details {
-    position: absolute;
-    padding: 20px;
-    height: 60%;
-    width: 100%;
-    bottom: -255px;
-    left: 0;
-    box-sizing: border-box;
-}
-
-.movieResult .card-container {
-    position: relative;
-    width: 20rem;
-    height: 520px;
-    perspective: 200rem;
-}
-
-.movieResult .card-container mt-5 {
+.movieResult .flip-card-container mt-5 {
     margin-top: 0;
 }
 
-.movieResult .card-container:hover .card-front {
+.movieResult .flip-card-container {
+    width: 20rem;
+    height: 500px;
+    perspective: 200rem;
+}
+
+.movieResult .flip-card {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    transition: all 0.9s;
+    transform-style: preserve-3d;
+}
+
+.movieResult .flip-card-container:hover .flip-card {
     transform: rotateY(180deg);
 }
 
-.movieResult .card-container:hover .card-back {
-    transform: rotateY(0deg);
+.movieResult .flip-card-front, .movieResult .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden; /* Safari */
+    backface-visibility: hidden;
+    display: flex;
 }
 
-.movieResult .card-container .card-body {
-    background-color: #000000;
-    color: #c0c0c0;
+.movieResult .flip-card-front {
+    background-color: transparent;
+    z-index: 1;
+}
+
+.movieResult .flip-card-back {
+    background-color: black;
+    color: white;
+    transform: rotateY(180deg);
+    text-align: left;
+    border-radius: 4px;
+}
+
+.movieResult .flip-card-front img {
+    width: 100%;
+    height: 100%;
+    border-radius: 4px;
 }
 
 .movieResult .bi-star-fill {
-    color:gold;
+    color: gold;
 }
 
-.movieResult .card-front-text {
+.movieResult .flip-card-back .tags {
     color: dimgrey;
     font-size: 14px;
 }
 
-.movieResult .tags {
+.movieResult .flip-card-back .tags {
     position: relative;
     margin-top: 5px;
     margin-bottom: 5px;
-    padding-left: 4px;
-    padding-right: 4px;
-    text-align: center;
+    text-align: left;
 }
 
-.movieResult .tags span {
+.movieResult .flip-card-back .tags span {
     padding: 2px 5px;
     margin-right: 2px;
     margin-left: 2px;
     margin-bottom: 6px;
     color: dimgrey;
-    font-size: 14px;
+    font-size: 12px;
     display: inline-block;
     border-radius: 4px;
     background: #1b1b1d;
 }
 
-.movieResult .card-back {
-    transform: rotateY(180deg);
-}
-
-.movieResult .card-back .card-body {
-    position: relative;
-    background-color: #000000;
-}
-
-.movieResult .card-back .card-body h5, .movieResult .card-back .card-body h3 {
-    color: whitesmoke;
-}
-
-.movieResult .card-back .card-body p, .movieResult .card-back .card-body .rating-value {
-    color: #c0c0c0;
+.movieResult .flip-card-back p {
+    font-size: 14px;
 }
 
 
-/*.movieResult .rating i, .movieResult .rating p {
-    float: left;
-}
 
-.movieResult .rating p {
-    margin-top: 0;
-    margin-left: 10px;
-}
-
-.movieResult .rating i {
-    color: #ff9d00;
-    margin-top: 5px;
-    margin-left: 1px;
-}*/
 
 /* card version two*/
 .rollUpCard {
@@ -276,11 +235,6 @@ body {
     padding: 0;
     font-size: 20px;
 }
-
-/*.rollUpCard .details h2 span {
-    font-size: 14px;
-    color: #ff9800;  
-}*/
 
 .rollUpCard .rating {
     position: relative;
