@@ -60,6 +60,10 @@ body {
     border: none;
 }
 
+.movie-side-text {
+    padding-top: 10px;
+}
+
 .movie-side-text h4 {
     color: #269FFE;
 }
@@ -80,7 +84,6 @@ body {
     width: 20rem;
     height: 500px;
     perspective: 200rem;
-    padding-bottom: 10px;
 }
 
 .movieResult .flip-card {
