@@ -1,0 +1,58 @@
+﻿@page
+@model IS7024WebApplication.Pages.ChefAuthorsModel
+@{
+    List<ChefAuthor> chefAuthors = (List<ChefAuthor>)ViewData["chefAuthors"];
+}
+
+<body>
+    <h2 class="trending-movies">
+        List of Chef Authors
+    </h2>
+    <br/>
+    @if (chefAuthors != null)
+    {
+        <table class="table border">
+            <thead class="trending-movies">
+                <tr>
+                    <th>
+                       Name
+                    </th>
+                    <th>
+                        Title
+                    </th>
+                    <th>
+                        Favourite Recipe
+                    </th>
+                    <th>
+                       Phone
+                    </th>
+                    <th>
+                        Email
+                    </th>
+                </tr>
+            </thead>
+            <tbody class="text-light">
+                @foreach (ChefAuthor chef in chefAuthors)
+                {
+                    <tr>
+                        <td>
+                            @chef.Name
+                        </td>
+                        <td>
+                            @chef.Title
+                        </td>
+                        <td>
+                            @chef.FavoriteRecipe
+                        </td>
+                        <td>
+                            @chef.Phone
+                        </td>
+                        <td>
+                            @chef.Email
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    }
+</body>

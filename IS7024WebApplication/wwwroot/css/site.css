@@ -63,6 +63,10 @@ body {
     color: #269FFE;
 }
 
+.nav-title {
+    padding-top:20px;
+}
+
 .card {
     border: none;
 }

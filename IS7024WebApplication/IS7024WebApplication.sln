@@ -5,7 +5,7 @@ VisualStudioVersion = 17.3.32901.215
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IS7024WebApplication", "IS7024WebApplication.csproj", "{6F8559C2-69AC-4108-8F76-5345BAAA0B26}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WatchNowAPI", "..\WatchNowAPI\WatchNowAPI.csproj", "{62C2B808-0B72-4DB4-B410-632F9ED8F6A9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WatchNowAPI", "..\WatchNowAPI\WatchNowAPI.csproj", "{62C2B808-0B72-4DB4-B410-632F9ED8F6A9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
