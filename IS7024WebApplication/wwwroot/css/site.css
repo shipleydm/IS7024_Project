@@ -31,20 +31,10 @@ html {
 body {
     padding: 0;
     margin-bottom: 70px;
-    /*background: #EFEFEF;*/
-    /* background: #001328;*/
-    /*background: #001F41;*/
     background: #181e20; /*shark #181e20*/
-    /*background-image: linear-gradient(to right, #0f0c29, #302b63, #24243e);*/
-    /*background: #003153;*/
-    /*background: linear-gradient(360deg, #1C1C1C 10%, #494949 360%);*/ /*black chrome*/
-    /*background-image: linear-gradient(to right, #8e2de2, #4a00e0);*/
 }
 
 .navbar {
-    /*background: #0008a3;*/
-    /* background: #0700C4;*/ /*brighter*/
-    /*background: #1134A6;*/
     background: #181e20;
     border-bottom: 0.8px solid #3c3e41;
 }
@@ -175,7 +165,6 @@ body {
 
 /* card version two*/
 .rollUpCard {
-    /*position: absolute;*/
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -264,31 +253,6 @@ body {
     color: #c0c0c0;
 }
 
-/*.rollUpCard .rating p {
-    color: #fff;
-}*/
-
-/*.rollUpCard .tags {
-    position: relative;
-    margin-top: 5px;
-}
-
-.rollUpCard .tags p {
-    color: #fff
-}
-
-.rollUpCard .tags span {
-    padding: 2px 5px;
-    margin-right: 2px;
-    color: #fff;
-    display: inline-block;
-    border-radius: 4px;
-}
-
-.rollUpCard .tags span.genre {
-    background: #7206f7
-}*/
-
 .rollUpCard .info p {
     color: #fff;
 }
@@ -300,21 +264,6 @@ body {
 .rollUpCard .info p {
     margin: 15px 0 10px;
 }
-
-/*.rollUpCard .star {
-    position: relative;
-}
-
-.rollUpCard .star p {
-    color: #fff;
-}
-
-.rollUpCard .star h4 {
-    margin: 0;
-    padding: 0;
-    font-size: 20px;
-    color: #f7f406;
-}*/
 
 
 

@@ -31,9 +31,9 @@ namespace IS7024WebApplication.Pages
             TrendingMovieModel trendingMovies = new TrendingMovieModel();
             if (result.IsSuccessStatusCode)
             {
-                Task<string> readString = result.Content.ReadAsStringAsync();
-                string jsonString = readString.Result;
-                trendingMovies = TrendingMovieModel.FromJson(jsonString);
+                Task<string> trendingString = result.Content.ReadAsStringAsync();
+                string trendingResult = trendingString.Result;
+                trendingMovies = TrendingMovieModel.FromJson(trendingResult);
             }
             ViewData["trendingMovies"] = trendingMovies;
         }

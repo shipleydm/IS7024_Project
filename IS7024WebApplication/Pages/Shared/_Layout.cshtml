@@ -10,33 +10,14 @@
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand-md">
-            <div class="container">
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-                    <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
-                            <a class="navbar-brand" asp-area="" asp-page="/Index"><img src="~/images/movie_home_aqua.png" alt="Home" /></a>
-                        </li>
-                    </ul>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light box-shadow mb-3">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a class="navbar-brand" asp-area="" asp-page="/Index"><img src="~/images/movie_home_aqua.png" alt="Home" /></a>
                 </div>
             </div>
         </nav>
     </header>
-    @*<header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light box-shadow mb-3">
-            <div class="container-fluid">
-                <div class="navbar-header">
-                    ul
-                    <a class="navbar-brand" asp-area="" asp-page="/Index"><img src="~/images/movie_home_aqua.png" alt="Home" /></a>
-                    <a class="nav-link" asp-area="" asp-page="/ChefAuthors">Chef Authors</a>
-                </div>
-            </div>
-        </nav>
-    </header>*@
     <div class="container-fluid">
         <main role="main" class="pb-3">
             @RenderBody()

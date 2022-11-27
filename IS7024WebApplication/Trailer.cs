@@ -180,11 +180,6 @@ namespace IS7024WebApplication
     }
 
 
-    //public string Iso3166_1 { get; set; }
-
-    //public string Site { get; set; }
-
-
     public partial class Trailer
     {
         public static Trailer FromJson(string json) => JsonConvert.DeserializeObject<Trailer>(json, IS7024WebApplication.Converter.Settings);

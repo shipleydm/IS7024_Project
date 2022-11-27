@@ -25,16 +25,16 @@ namespace WatchNowAPI.Controllers
             TrendingMovieModel trendingMovies = new TrendingMovieModel();
             if (result.IsSuccessStatusCode)
             {
-                Task<string> readString = result.Content.ReadAsStringAsync();
-                string jsonString = readString.Result;
+                Task<string> trendingString = result.Content.ReadAsStringAsync();
+                string trendingResult = trendingString.Result;
 
                 // validation
                 JSchema movieSchema = JSchema.Parse(System.IO.File.ReadAllText("Schemas/trending-movies-schema.json"));
-                JObject jsonObject = JObject.Parse(jsonString);
+                JObject jsonObject = JObject.Parse(trendingResult);
                 IList<string> validationEvents = new List<string>();
                 if (jsonObject.IsValid(movieSchema, out validationEvents))
                 {
-                    trendingMovies = TrendingMovieModel.FromJson(jsonString);
+                    trendingMovies = TrendingMovieModel.FromJson(trendingResult);
                 }
                 else
                 {
