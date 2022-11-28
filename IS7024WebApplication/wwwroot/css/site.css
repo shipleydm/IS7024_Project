@@ -21,17 +21,16 @@ html {
 }
 
 /* color codes
-#A1DDED - gulf blue
-#fa5b3d - soda ornage
-#F57634 - gulf orange
+#fa5b3d - soda orange
 #FFF8EF - cream white
 #269FFE - aqua blue
+#181e20 - shark
 */
 
 body {
     padding: 0;
     margin-bottom: 70px;
-    background: #181e20; /*shark #181e20*/
+    background: #181e20;
 }
 
 .navbar {
